@@ -1,0 +1,210 @@
+from src.control.kakas1 import clear_view
+from .menu1 import daftar_menu
+
+def pilih_utama():
+    daftar_menu("utama")
+    while True:
+        pilihan = input("")
+        match pilihan:
+            case "1" : return menu_pilihan("user")
+            case "2" : return menu_pilihan("database")
+            case "3" : return menu_pilihan("tabel")
+            case "4" : return menu_pilihan("data")
+            case "5" : return menu_pilihan("monitoring")
+            case ""  : return menu_pilihan("utama")
+            case "0" : break
+            case _   : print(f"nomor pilihanmu '{pilihan}'. tidak cocok...!")
+
+def pilih_user():
+    daftar_menu("user")
+    while True:
+        pilihan = input("")
+        match pilihan:
+            case "1"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "2"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "3"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "4"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "5"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "6"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "7"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "8"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "9"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "10" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "11" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case ""   : return menu_pilihan("user")
+            case "0"  : break
+            case "00" : return menu_pilihan("utama")
+            case _    : print(f"nomor pilihanmu '{pilihan}'. tidak cocok...!")
+
+def pilih_database():
+    daftar_menu("database")
+    while True:
+        pilihan = input("")
+        match pilihan:
+            case "1"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "2"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "3"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "4"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case ""   : return menu_pilihan("database")
+            case "0"  : break
+            case "00" : return menu_pilihan("utama")
+            case _    : print(f"nomor pilihanmu '{pilihan}'. tidak cocok...!")
+
+def pilih_tabel():
+    daftar_menu("tabel")
+    while True:
+        pilihan = input("")
+        match pilihan:
+            case "1"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "2"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "3"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "4"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "5"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "6"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "7"  : return menu_pilihan("struktur")
+            case "8"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "9"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case ""   : return menu_pilihan("tabel")
+            case "0"  : break
+            case "00" : return menu_pilihan("utama")
+            case _    : print(f"nomor pilihanmu '{pilihan}'. tidak cocok...!")
+
+def pilih_data():
+    daftar_menu("data")
+    while True:
+        pilihan = input("")
+        match pilihan:
+            case "1"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "2"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "3"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "4"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "5"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "6"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "7"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "8"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "9"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case ""   : return menu_pilihan("data")
+            case "0"  : break
+            case "00" : return menu_pilihan("utama")
+            case _    : print(f"nomor pilihanmu '{pilihan}'. tidak cocok...!")
+
+def pilih_monitoring():
+    daftar_menu("monitoring")
+    while True:
+        pilihan = input("")
+        match pilihan:
+            case "1"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "2"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "3"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "4"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "5"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case ""   : return menu_pilihan("monitoring")
+            case "0"  : break
+            case "00" : return menu_pilihan("utama")
+            case _    : print(f"nomor pilihanmu '{pilihan}'. tidak cocok...!")
+
+def pilih_struktur():
+    daftar_menu("struktur")
+    while True:
+        pilihan = input("")
+        match pilihan:
+            case "1"  : return menu_pilihan("kolom")
+            case "2"  : return menu_pilihan("constraint")
+            case "3"  : return menu_pilihan("properti")
+            case "4"  : return menu_pilihan("partisi")
+            case ""   : return menu_pilihan("struktur")
+            case "0"  : break
+            case "00" : return menu_pilihan("tabel")
+            case _    : print(f"nomor pilihanmu '{pilihan}'. tidak cocok...!")
+
+def pilih_kolom():
+    daftar_menu("kolom")
+    while True:
+        pilihan = input("")
+        match pilihan:
+            case "1"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "2"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "3"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "4"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "5"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "6"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "7"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "8"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "9"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case ""   : return menu_pilihan("kolom")
+            case "0"  : break
+            case "00" : return menu_pilihan("struktur")
+            case _    : print(f"nomor pilihanmu '{pilihan}'. tidak cocok...!")
+
+def pilih_constraint():
+    daftar_menu("constraint")
+    while True:
+        pilihan = input("")
+        match pilihan:
+            case "1"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "2"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "3"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "4"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "5"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "6"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "7"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "8"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "9"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "10" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "11" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "12" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "13" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "14" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case ""   : return menu_pilihan("constraint")
+            case "0"  : break
+            case "00" : return menu_pilihan("struktur")
+            case _    : print(f"nomor pilihanmu '{pilihan}'. tidak cocok...!")
+
+def pilih_properti():
+    daftar_menu("properti")
+    while True:
+        pilihan = input("")
+        match pilihan:
+            case "1"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "2"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "3"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "4"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "5"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "6"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "7"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "8"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case ""   : return menu_pilihan("properti")
+            case "0"  : break
+            case "00" : return menu_pilihan("struktur")
+            case _    : print(f"nomor pilihanmu '{pilihan}'. tidak cocok...!")
+
+def pilih_partisi():
+    daftar_menu("partisi")
+    while True:
+        pilihan = input("")
+        match pilihan:
+            case "1"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "2"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case ""   : return menu_pilihan("partisi")
+            case "0"  : break
+            case "00" : return menu_pilihan("struktur")
+            case _    : print(f"nomor pilihanmu '{pilihan}'. tidak cocok...!")
+
+data_dict = {
+    "utama"     : pilih_utama,
+    "user"      : pilih_user,
+    "database"  : pilih_database,
+    "tabel"     : pilih_tabel,
+    "data"      : pilih_data,
+    "monitoring": pilih_monitoring,
+    "struktur"  : pilih_struktur,
+    "kolom"     : pilih_kolom,
+    "constraint": pilih_constraint,
+    "properti"  : pilih_properti,
+    "partisi"   : pilih_partisi
+    }
+
+def menu_pilihan(nama_menu):
+    clear_view()
+    fungsi = data_dict.get(nama_menu)
+    return fungsi()
