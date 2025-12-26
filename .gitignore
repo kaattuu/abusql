@@ -1,1 +1,8 @@
 .tahapan
+.tabel
+.python-version
+.env
+.venv/
+.env/
+venv/
+__pycache__/
