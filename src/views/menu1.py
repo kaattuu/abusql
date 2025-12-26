@@ -1,9 +1,9 @@
 menu_utama = (
-    "manajemen user",
-    "manajemen database",
-    "manajemen tabel",
-    "manajemen data",
-    "monitoring"
+    "manajemen user -",
+    "manajemen database -",
+    "manajemen tabel -",
+    "manajemen data -",
+    "monitoring -"
     )
 
 menu_user = (
@@ -34,7 +34,7 @@ menu_tabel = (
     "lihat tabel",
     "lihat struktur tabel",
     "lihat kode pembuatan tabel",
-    "ubah struktur tabel",
+    "ubah struktur tabel -",
     "rename tabel",
     "hapus tabel"
     )
@@ -60,10 +60,10 @@ menu_monitoring = (
     )
 
 menu_struktur = (
-    "operasi kolom (tambah-hapus)",
-    "operasi constraint (tambah-hapus)",
-    "operasi property dan utulitas tabel",
-    "operasi partisi (opsional-lanjutan)"
+    "operasi kolom (tambah-hapus) -",
+    "operasi constraint (tambah-hapus) -",
+    "operasi property dan utulitas tabel -",
+    "operasi partisi (opsional-lanjutan) -"
     )
 
 menu_kolom = (
