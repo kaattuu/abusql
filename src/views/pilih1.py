@@ -1,5 +1,6 @@
 from src.control.kakas1 import clear_view
 from .menu1 import daftar_menu
+from src.control.control2 import kendali
 
 def pilih_utama():
     daftar_menu("utama")
@@ -93,7 +94,7 @@ def pilih_monitoring():
     while True:
         pilihan = input("")
         match pilihan:
-            case "1"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "1"  : kendali("kendali1", "c1")
             case "2"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "3"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "4"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
