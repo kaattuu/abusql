@@ -1,5 +1,5 @@
 from src.model.executor import eksekusi
-from src.view.table import tabel
+from src.views.table import tabel
 
 def kendali1(myeks, mytab):
     data = eksekusi(myeks)
@@ -33,7 +33,7 @@ config = {
     "c5": {"myinp": "", "myque": "", "myeks": "",          "mytab": ""},
     }
 
-def kendali(mykend, mycon):
+def kendali(myken, mycon):
     fungsi = daftar.get(myken)
     konfig = config.get(mycon)
 

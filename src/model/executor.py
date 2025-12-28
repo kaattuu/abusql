@@ -1,9 +1,9 @@
 from src.config.db_config import mypool
-from mysql-connector import Error
+from mysql.connector import Error
 
 def eksekusi1():
     try:
-        with mypool.get_connection() ass conn:
+        with mypool.get_connection() as conn:
             return (conn.user, conn.server_host)
     except Error as db_error:
         print(f"db_error: {db_error}")
