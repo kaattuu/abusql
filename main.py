@@ -4,6 +4,6 @@
 
 from src.views.table import tabel
 
-data1 = ("no", "nama", "alamat")
+data1 = ("satu kolom satu baris",)
 
 tabel("tabel1", data1)
