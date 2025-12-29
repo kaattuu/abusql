@@ -122,7 +122,47 @@ def tabel5(data):
 
 # satu sampai n kolom dan satu sampai n baris
 def tabel6(data):
-    pass
+    if not data:
+        return
+
+    padding_kiri = 1
+    padding_kanan = 1
+    
+    jumlah_baris = len(data)
+    jumlah_kolom = len(data[0])
+
+    # 1. Menghitung lebar maksimal tiap kolom (dibersihkan dengan strip)
+    lebar_kolom = []
+    for j in range(jumlah_kolom):
+        # .strip() memastikan spasi liar di awal/akhir data tidak mengganggu hitungan
+        lebar = max(len(str(baris[j]).strip()) for baris in data)
+        lebar_kolom.append(lebar)
+
+    # 2. Fungsi pembantu garis horizontal
+    def buat_garis(kiri, tengah, kanan):
+        # Menghitung total lebar sel: padding_kiri + lebar_isi + padding_kanan
+        isi = tengah.join(["─" * (l + padding_kiri + padding_kanan) for l in lebar_kolom])
+        return f"{kiri}{isi}{kanan}"
+
+    # 3. Cetak tabel
+    print()
+    print(buat_garis("┌", "┬", "┐"))
+    
+    for i, baris in enumerate(data):
+        isi_sel = []
+        for idx, item in enumerate(baris):
+            teks = str(item).strip()
+            # Merapikan teks dengan padding manual yang presisi
+            sel = f"{' ' * padding_kiri}{teks.ljust(lebar_kolom[idx])}{' ' * padding_kanan}"
+            isi_sel.append(sel)
+        
+        print(f"│{'│'.join(isi_sel)}│")
+        
+        if i < jumlah_baris - 1:
+            print(buat_garis("├", "┼", "┤"))
+            
+    print(buat_garis("└", "┴", "┘"))
+    print()
 
 daftar = {
     "tabel0": tabel0,
