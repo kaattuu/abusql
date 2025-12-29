@@ -1,5 +1,6 @@
 def tabel0(data):
     print(data)
+    print(type(data))
 
 # satu kolom satu baris
 def tabel1(data): 
@@ -37,14 +38,43 @@ def tabel2(data):
     print(garis_bawah)
     print()
 
-
+# satu sampai n kolom satu baris
 def tabel3(data):
-    pass
+    # Mengonversi semua elemen ke string dan menghitung lebar tiap kolom
+    padding = 2
+    lebar_kolom = [len(str(item)) + padding for item in data]
+    
+    # 1. Membuat garis atas
+    # Bagian tengah menggunakan '┬' sebagai penyambung antar kolom
+    isi_atas = "┬".join(["─" * lebar for lebar in lebar_kolom])
+    garis_atas = f"┌{isi_atas}┐"
+    
+    # 2. Membuat baris data
+    # Menggabungkan elemen dengan separator ' │ '
+    isi_tengah = " │ ".join([str(item) for item in data])
+    garis_tengah = f"│ {isi_tengah} │"
+    
+    # 3. Membuat garis bawah
+    # Bagian tengah menggunakan '┴' sebagai penyambung antar kolom
+    isi_bawah = "┴".join(["─" * lebar for lebar in lebar_kolom])
+    garis_bawah = f"└{isi_bawah}┘"
+    
+    print()
+    print(garis_atas)
+    print(garis_tengah)
+    print(garis_bawah)
+    print()
 
+# satu kolom dua baris
 def tabel4(data):
     pass
 
+# dua kolom dua baris
 def tabel5(data):
+    pass
+
+# satu sampai n kolom dan satu sampai n baris
+def tabel6(data):
     pass
 
 daftar = {
@@ -54,6 +84,7 @@ daftar = {
     "tabel3": tabel3,
     "tabel4": tabel4,
     "tabel5": tabel5,
+    "tabel6": tabel6,
     }
 
 def tabel(pilih, data):
