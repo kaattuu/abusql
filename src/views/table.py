@@ -67,7 +67,27 @@ def tabel3(data):
 
 # satu kolom dua baris
 def tabel4(data):
-    pass
+    # Data diharapkan berupa tuple dengan 2 elemen, misal: ("Baris 1", "Baris 2")
+    padding = 2
+    # Mencari string terpanjang di antara kedua baris agar lebar kolom konsisten
+    lebar_maks = max(len(str(data[0])), len(str(data[1]))) + padding
+    
+    garis_horizontal = "─" * lebar_maks
+    
+    # Konstruksi tabel
+    garis_atas    = f"┌{garis_horizontal}┐"
+    baris_1       = f"│ {str(data[0]).ljust(lebar_maks - 1)}│"
+    garis_tengah  = f"├{garis_horizontal}┤"
+    baris_2       = f"│ {str(data[1]).ljust(lebar_maks - 1)}│"
+    garis_bawah   = f"└{garis_horizontal}┘"
+    
+    print()
+    print(garis_atas)
+    print(baris_1)
+    print(garis_tengah)
+    print(baris_2)
+    print(garis_bawah)
+    print()
 
 # dua kolom dua baris
 def tabel5(data):
