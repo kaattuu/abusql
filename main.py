@@ -6,6 +6,7 @@ from src.views.table import tabel
 from src.control.kakas1 import clear_view
 
 data1 = ("satu kolom satu baris",)
+data2 = ("kolom satu", "kolom dua")
 
 clear_view()
-tabel("tabel1", data1)
+tabel("tabel2", data2)
