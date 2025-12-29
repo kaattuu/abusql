@@ -125,24 +125,37 @@ def tabel6(data):
     if not data:
         return
 
+    # --- VALIDASI & NORMALISASI DATA ---
+    # Jika data hanya tuple/list 1D (satu baris), bungkus dalam list agar jadi 2D
+    if not isinstance(data[0], (list, tuple)):
+        data = [data]
+    
     padding_kiri = 1
     padding_kanan = 1
     
     jumlah_baris = len(data)
     jumlah_kolom = len(data[0])
 
-    # 1. Menghitung lebar maksimal tiap kolom (dibersihkan dengan strip)
+    # 1. Menghitung lebar maksimal tiap kolom
     lebar_kolom = []
     for j in range(jumlah_kolom):
-        # .strip() memastikan spasi liar di awal/akhir data tidak mengganggu hitungan
-        lebar = max(len(str(baris[j]).strip()) for baris in data)
-        lebar_kolom.append(lebar)
+        # Gunakan str().strip() dan proteksi jika ada baris yang kolomnya lebih sedikit
+        maks = 0
+        for baris in data:
+            try:
+                isi = str(baris[j]).strip()
+                if len(isi) > maks:
+                    maks = len(isi)
+            except IndexError:
+                continue 
+        lebar_kolom.append(maks)
 
     # 2. Fungsi pembantu garis horizontal
     def buat_garis(kiri, tengah, kanan):
-        # Menghitung total lebar sel: padding_kiri + lebar_isi + padding_kanan
-        isi = tengah.join(["─" * (l + padding_kiri + padding_kanan) for l in lebar_kolom])
-        return f"{kiri}{isi}{kanan}"
+        bagian = []
+        for l in lebar_kolom:
+            bagian.append("─" * (l + padding_kiri + padding_kanan))
+        return f"{kiri}{tengah.join(bagian)}{kanan}"
 
     # 3. Cetak tabel
     print()
@@ -150,9 +163,13 @@ def tabel6(data):
     
     for i, baris in enumerate(data):
         isi_sel = []
-        for idx, item in enumerate(baris):
-            teks = str(item).strip()
-            # Merapikan teks dengan padding manual yang presisi
+        for idx in range(jumlah_kolom):
+            # Ambil data jika ada, jika tidak ada (baris pendek) isi spasi kosong
+            try:
+                teks = str(baris[idx]).strip()
+            except IndexError:
+                teks = ""
+                
             sel = f"{' ' * padding_kiri}{teks.ljust(lebar_kolom[idx])}{' ' * padding_kanan}"
             isi_sel.append(sel)
         
