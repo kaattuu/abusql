@@ -91,7 +91,34 @@ def tabel4(data):
 
 # dua kolom dua baris
 def tabel5(data):
-    pass
+    # Data diharapkan berupa tuple of tuples atau list of lists
+    # Contoh: (("A1", "B1"), ("A2", "B2"))
+    padding = 2
+    
+    # Mengambil elemen untuk memudahkan penulisan
+    r1c1, r1c2 = data[0]
+    r2c1, r2c2 = data[1]
+    
+    # Menghitung lebar maksimal tiap kolom
+    lebar_k1 = max(len(str(r1c1)), len(str(r2c1))) + padding
+    lebar_k2 = max(len(str(r1c2)), len(str(r2c2))) + padding
+    
+    # Konstruksi Garis
+    garis_atas   = f"┌{'─' * lebar_k1}┬{'─' * lebar_k2}┐"
+    garis_tengah = f"├{'─' * lebar_k1}┼{'─' * lebar_k2}┤"
+    garis_bawah  = f"└{'─' * lebar_k1}┴{'─' * lebar_k2}┘"
+    
+    # Konstruksi Baris Data
+    baris1 = f"│ {str(r1c1).ljust(lebar_k1-1)}│ {str(r1c2).ljust(lebar_k2-1)}│"
+    baris2 = f"│ {str(r2c1).ljust(lebar_k1-1)}│ {str(r2c2).ljust(lebar_k2-1)}│"
+    
+    print()
+    print(garis_atas)
+    print(baris1)
+    print(garis_tengah)
+    print(baris2)
+    print(garis_bawah)
+    print()
 
 # satu sampai n kolom dan satu sampai n baris
 def tabel6(data):

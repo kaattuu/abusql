@@ -9,6 +9,10 @@ data1 = ("satu kolom satu baris",)
 data2 = ("kolom satu", "kolom dua")
 data3 = ("kolom satu", "kolom dua", "kolom tiga")
 data4 = (("kolom satu baris satu"), ("kolom satu baris dua"))
+data5 = (
+    ("judul kolom", "judul kolom"),
+    ("isi baris", "isi baris")
+)
 
 clear_view()
-tabel("tabel4", data4)
+tabel("tabel5", data5)
