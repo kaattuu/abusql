@@ -26,7 +26,7 @@ daftar = {
     }
 
 config = {
-    "c1": {"myinp": "", "myque": "", "myeks": "eksekusi1", "mytab": "tabel1"},
+    "c1": {"myinp": "", "myque": "", "myeks": "eksekusi1", "mytab": "tabel6"},
     "c2": {"myinp": "", "myque": "", "myeks": "",          "mytab": ""},
     "c3": {"myinp": "", "myque": "", "myeks": "",          "mytab": ""},
     "c4": {"myinp": "", "myque": "", "myeks": "",          "mytab": ""},

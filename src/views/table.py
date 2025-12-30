@@ -1,7 +1,9 @@
 def tabel0(data):
     print(data)
+    print(type(data))
 
-def tabel1(data):
+# satu kolom satu baris
+def tabel1(data): 
     jumlah_elemen = len(data)
     jumlah_huruf  = [len(i) for i in data]
     padding       = 2
@@ -16,17 +18,168 @@ def tabel1(data):
     print(garis_bawah)
     print()
 
-def tabel2(data):
-    pass
+# dua kolom satu baris
+def tabel2(data): 
+    # data diharapkan berupa tuple/list dengan 2 elemen, misal: ("Nama", "Hobi")
+    padding = 2
+    
+    # Menghitung lebar masing-masing kolom berdasarkan panjang string elemennya
+    lebar_kolom1 = len(str(data[0])) + padding
+    lebar_kolom2 = len(str(data[1])) + padding
+    
+    # Membuat garis pembatas
+    garis_atas   = f"┌{'─' * lebar_kolom1}┬{'─' * lebar_kolom2}┐"
+    garis_tengah = f"│ {data[0]} │ {data[1]} │"
+    garis_bawah  = f"└{'─' * lebar_kolom1}┴{'─' * lebar_kolom2}┘"
+    
+    print()
+    print(garis_atas)
+    print(garis_tengah)
+    print(garis_bawah)
+    print()
 
+# satu sampai n kolom satu baris
 def tabel3(data):
-    pass
+    # Mengonversi semua elemen ke string dan menghitung lebar tiap kolom
+    padding = 2
+    lebar_kolom = [len(str(item)) + padding for item in data]
+    
+    # 1. Membuat garis atas
+    # Bagian tengah menggunakan '┬' sebagai penyambung antar kolom
+    isi_atas = "┬".join(["─" * lebar for lebar in lebar_kolom])
+    garis_atas = f"┌{isi_atas}┐"
+    
+    # 2. Membuat baris data
+    # Menggabungkan elemen dengan separator ' │ '
+    isi_tengah = " │ ".join([str(item) for item in data])
+    garis_tengah = f"│ {isi_tengah} │"
+    
+    # 3. Membuat garis bawah
+    # Bagian tengah menggunakan '┴' sebagai penyambung antar kolom
+    isi_bawah = "┴".join(["─" * lebar for lebar in lebar_kolom])
+    garis_bawah = f"└{isi_bawah}┘"
+    
+    print()
+    print(garis_atas)
+    print(garis_tengah)
+    print(garis_bawah)
+    print()
 
+# satu kolom dua baris
 def tabel4(data):
-    pass
+    # Data diharapkan berupa tuple dengan 2 elemen, misal: ("Baris 1", "Baris 2")
+    padding = 2
+    # Mencari string terpanjang di antara kedua baris agar lebar kolom konsisten
+    lebar_maks = max(len(str(data[0])), len(str(data[1]))) + padding
+    
+    garis_horizontal = "─" * lebar_maks
+    
+    # Konstruksi tabel
+    garis_atas    = f"┌{garis_horizontal}┐"
+    baris_1       = f"│ {str(data[0]).ljust(lebar_maks - 1)}│"
+    garis_tengah  = f"├{garis_horizontal}┤"
+    baris_2       = f"│ {str(data[1]).ljust(lebar_maks - 1)}│"
+    garis_bawah   = f"└{garis_horizontal}┘"
+    
+    print()
+    print(garis_atas)
+    print(baris_1)
+    print(garis_tengah)
+    print(baris_2)
+    print(garis_bawah)
+    print()
 
+# dua kolom dua baris
 def tabel5(data):
-    pass
+    # Data diharapkan berupa tuple of tuples atau list of lists
+    # Contoh: (("A1", "B1"), ("A2", "B2"))
+    padding = 2
+    
+    # Mengambil elemen untuk memudahkan penulisan
+    r1c1, r1c2 = data[0]
+    r2c1, r2c2 = data[1]
+    
+    # Menghitung lebar maksimal tiap kolom
+    lebar_k1 = max(len(str(r1c1)), len(str(r2c1))) + padding
+    lebar_k2 = max(len(str(r1c2)), len(str(r2c2))) + padding
+    
+    # Konstruksi Garis
+    garis_atas   = f"┌{'─' * lebar_k1}┬{'─' * lebar_k2}┐"
+    garis_tengah = f"├{'─' * lebar_k1}┼{'─' * lebar_k2}┤"
+    garis_bawah  = f"└{'─' * lebar_k1}┴{'─' * lebar_k2}┘"
+    
+    # Konstruksi Baris Data
+    baris1 = f"│ {str(r1c1).ljust(lebar_k1-1)}│ {str(r1c2).ljust(lebar_k2-1)}│"
+    baris2 = f"│ {str(r2c1).ljust(lebar_k1-1)}│ {str(r2c2).ljust(lebar_k2-1)}│"
+    
+    print()
+    print(garis_atas)
+    print(baris1)
+    print(garis_tengah)
+    print(baris2)
+    print(garis_bawah)
+    print()
+
+# satu sampai n kolom dan satu sampai n baris
+def tabel6(data):
+    if not data:
+        return
+
+    # --- VALIDASI & NORMALISASI DATA ---
+    # Jika data hanya tuple/list 1D (satu baris), bungkus dalam list agar jadi 2D
+    if not isinstance(data[0], (list, tuple)):
+        data = [data]
+    
+    padding_kiri = 1
+    padding_kanan = 1
+    
+    jumlah_baris = len(data)
+    jumlah_kolom = len(data[0])
+
+    # 1. Menghitung lebar maksimal tiap kolom
+    lebar_kolom = []
+    for j in range(jumlah_kolom):
+        # Gunakan str().strip() dan proteksi jika ada baris yang kolomnya lebih sedikit
+        maks = 0
+        for baris in data:
+            try:
+                isi = str(baris[j]).strip()
+                if len(isi) > maks:
+                    maks = len(isi)
+            except IndexError:
+                continue 
+        lebar_kolom.append(maks)
+
+    # 2. Fungsi pembantu garis horizontal
+    def buat_garis(kiri, tengah, kanan):
+        bagian = []
+        for l in lebar_kolom:
+            bagian.append("─" * (l + padding_kiri + padding_kanan))
+        return f"{kiri}{tengah.join(bagian)}{kanan}"
+
+    # 3. Cetak tabel
+    print()
+    print(buat_garis("┌", "┬", "┐"))
+    
+    for i, baris in enumerate(data):
+        isi_sel = []
+        for idx in range(jumlah_kolom):
+            # Ambil data jika ada, jika tidak ada (baris pendek) isi spasi kosong
+            try:
+                teks = str(baris[idx]).strip()
+            except IndexError:
+                teks = ""
+                
+            sel = f"{' ' * padding_kiri}{teks.ljust(lebar_kolom[idx])}{' ' * padding_kanan}"
+            isi_sel.append(sel)
+        
+        print(f"│{'│'.join(isi_sel)}│")
+        
+        if i < jumlah_baris - 1:
+            print(buat_garis("├", "┼", "┤"))
+            
+    print(buat_garis("└", "┴", "┘"))
+    print()
 
 daftar = {
     "tabel0": tabel0,
@@ -35,6 +188,7 @@ daftar = {
     "tabel3": tabel3,
     "tabel4": tabel4,
     "tabel5": tabel5,
+    "tabel6": tabel6,
     }
 
 def tabel(pilih, data):
