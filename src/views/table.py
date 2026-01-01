@@ -181,6 +181,61 @@ def tabel6(data):
     print(buat_garis("└", "┴", "┘"))
     print()
 
+def tabel7(data):
+    if data is None:
+        return print("data kosong...! tidak bisa menampilkan data tabel")
+    tabel = list(data)
+    jns_tabel = type(tabel)
+    type_data = [[type(baris) for baris in row] for row in tabel]
+    jml_huruf = [[len(str(baris)) for baris in row] for row in tabel]
+    transpose = list(zip(*jml_huruf))
+    max_huruf = [max(row) for row in transpose]
+    jml_kolom = len(tabel[0])
+    jml_baris = len(tabel) - 1
+    tot_baris = len(tabel)
+    print("")
+    for index, kolom in enumerate(tabel):
+        # garis atas
+        if index == 0 and index != 1:
+            garis_atas = ""
+            for i, maks in enumerate(max_huruf):
+                if i == jml_kolom - 1:
+                    garis_atas += f"─{"─" * maks}─"
+                else:
+                    garis_atas += f"─{"─" * maks}─┬"
+            print(f"┌{garis_atas}┐")
+        # isi baris kolom tabel
+        isi_baris = ""
+        for baris, maks in zip(kolom, max_huruf):
+            if baris == None:
+                baris = str(baris)
+            if index == 0:
+                isi_baris += f"│ {baris:^{maks}} "
+            elif isinstance(baris, float):
+                isi_baris += f"│ {baris:>{maks}.3f} "
+            else:
+                isi_baris += f"│ {baris:{maks}} "
+        print(f"{isi_baris}│")
+        # garis pemisah judul kolom dan baris
+        if index == 0 and tot_baris > 1:
+            garis_pisah = ""
+            for i, maks in enumerate(max_huruf):
+                if i == jml_kolom - 1:
+                    garis_pisah += f"─{"─" * maks}─"
+                else:
+                    garis_pisah += f"─{"─" * maks}─┼"
+            print(f"├{garis_pisah}┤")
+        # garis bawah
+        if index == tot_baris - 1:
+            garis_bawah = ""
+            for i, maks in enumerate(max_huruf):
+                if i == jml_kolom - 1:
+                    garis_bawah += f"─{"─" * maks}─"
+                else:
+                    garis_bawah += f"─{"─" * maks}─┴"
+            print(f"└{garis_bawah}┘")
+    print("")
+
 daftar = {
     "tabel0": tabel0,
     "tabel1": tabel1,
@@ -189,6 +244,7 @@ daftar = {
     "tabel4": tabel4,
     "tabel5": tabel5,
     "tabel6": tabel6,
+    "tabel7": tabel7,
     }
 
 def tabel(pilih, data):
