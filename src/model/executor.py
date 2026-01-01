@@ -1,10 +1,11 @@
 from src.config.db_config import mypool
+from src.config.my_config import my_global
 from mysql.connector import Error
 
 def eksekusi1():
     try:
         with mypool.get_connection() as conn:
-            return (conn.user, conn.server_host)
+            return (conn.user, conn.server_host, my_global("mydb"))
     except Error as db_error:
         print(f"db_error: {db_error}")
     except Exception as e:
