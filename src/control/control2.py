@@ -1,3 +1,4 @@
+from src.model.sql import query
 from src.model.executor import eksekusi
 from src.views.table import tabel
 
@@ -5,8 +6,10 @@ def kendali1(myeks, mytab):
     data = eksekusi(myeks)
     return tabel(mytab, data)
 
-def kendali2():
-    pass
+def kendali2(myque, mynum, myeks, mytab):
+    data1 = query(myque, mynum)
+    data2 = eksekusi(myeks, data1)
+    return tabel(mytab, data2)
 
 def kendali3():
     pass
@@ -26,11 +29,12 @@ daftar = {
     }
 
 config = {
-    "c1": {"myinp": "", "myque": "", "myeks": "eksekusi1", "mytab": "tabel6"},
-    "c2": {"myinp": "", "myque": "", "myeks": "",          "mytab": ""},
-    "c3": {"myinp": "", "myque": "", "myeks": "",          "mytab": ""},
-    "c4": {"myinp": "", "myque": "", "myeks": "",          "mytab": ""},
-    "c5": {"myinp": "", "myque": "", "myeks": "",          "mytab": ""},
+    # monitoring
+    "c1": {"myinp": "", "myque": "",       "mynum": "",  "myeks": "eksekusi1", "mytab": "tabel6"},
+    "c2": {"myinp": "", "myque": "query1", "mynum": "2", "myeks": "eksekusi2", "mytab": "tabel7"},
+    "c3": {"myinp": "", "myque": "",       "mynum": "",  "myeks": "",          "mytab": ""},
+    "c4": {"myinp": "", "myque": "",       "mynum": "",  "myeks": "",          "mytab": ""},
+    "c5": {"myinp": "", "myque": "",       "mynum": "",  "myeks": "",          "mytab": ""},
     }
 
 def kendali(myken, mycon):
@@ -39,8 +43,11 @@ def kendali(myken, mycon):
 
     myinp = konfig.get("myinp")
     myque = konfig.get("myque")
+    mynum = konfig.get("mynum")
     myeks = konfig.get("myeks")
     mytab = konfig.get("mytab")
 
     if myken == "kendali1":
         return fungsi(myeks, mytab)
+    if myken == "kendali2":
+        return fungsi(myque, mynum, myeks, mytab)

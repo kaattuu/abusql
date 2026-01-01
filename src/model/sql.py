@@ -1,5 +1,12 @@
-def query1():
-    pass
+def query1(myquery):
+    monitoring = {
+        "1": "",
+        "2": "SHOW VARIABLES LIKE 'char%'",
+        "3": "",
+        "4": "",
+        "5": "",
+        }
+    return monitoring.get(myquery)
 
 def query2():
     pass
@@ -21,6 +28,6 @@ daftar = {
     "query5": query5,
     }
 
-def query(pilih):
+def query(pilih, myquery):
     fungsi = daftar.get(pilih)
-    return fungsi()
+    return fungsi(myquery)
