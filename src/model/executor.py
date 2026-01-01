@@ -25,8 +25,22 @@ def eksekusi2(query):
     except Exception as e:
         print(f"error: {e}")
 
-def eksekusi3():
-    pass
+def eksekusi3(query):
+    try: 
+        with mypool.get_connection() as conn:
+            with conn.cursor() as cursor:
+                cursor.execute(query)
+                kolom = list(cursor.column_names)
+                kolom.insert(0, "parameter")
+                baris = cursor.fetchall()
+                baris = [[str(j) for j in i] for i in baris]
+                baris[0].insert(0, "details")
+                baris.insert(0, kolom)
+                return list(zip(*baris))
+    except Error as db_error:
+        print(f"db_error: {db_error}")
+    except Exception as e:
+        print(f"error: {e}")
 
 def eksekusi4():
     pass
@@ -47,4 +61,6 @@ def eksekusi(pilih, query=None):
     if pilih == "eksekusi1":
         return fungsi()
     if pilih == "eksekusi2":
+        return fungsi(query)
+    if pilih == "eksekusi3":
         return fungsi(query)

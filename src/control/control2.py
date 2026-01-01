@@ -34,7 +34,7 @@ config = {
     "c2": {"myinp": "", "myque": "query1", "mynum": "2", "myeks": "eksekusi2", "mytab": "tabel7"},
     "c3": {"myinp": "", "myque": "query1", "mynum": "3", "myeks": "eksekusi2", "mytab": "tabel7"},
     "c4": {"myinp": "", "myque": "query1", "mynum": "4", "myeks": "eksekusi2", "mytab": "tabel7"},
-    "c5": {"myinp": "", "myque": "query1", "mynum": "5", "myeks": "eksekusi2", "mytab": "tabel7"},
+    "c5": {"myinp": "", "myque": "query1", "mynum": "5", "myeks": "eksekusi3", "mytab": "tabel7"},
     }
 
 def kendali(myken, mycon):
