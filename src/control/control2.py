@@ -33,7 +33,7 @@ config = {
     "c1": {"myinp": "", "myque": "",       "mynum": "",  "myeks": "eksekusi1", "mytab": "tabel6"},
     "c2": {"myinp": "", "myque": "query1", "mynum": "2", "myeks": "eksekusi2", "mytab": "tabel7"},
     "c3": {"myinp": "", "myque": "query1", "mynum": "3", "myeks": "eksekusi2", "mytab": "tabel7"},
-    "c4": {"myinp": "", "myque": "",       "mynum": "",  "myeks": "",          "mytab": ""},
+    "c4": {"myinp": "", "myque": "query1", "mynum": "4", "myeks": "eksekusi2", "mytab": "tabel7"},
     "c5": {"myinp": "", "myque": "",       "mynum": "",  "myeks": "",          "mytab": ""},
     }
 
