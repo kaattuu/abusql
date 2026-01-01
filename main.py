@@ -23,4 +23,4 @@ data6 = (
 )
 
 clear_view()
-tabel("tabel6", data6)
+tabel("tabel7", data6)
