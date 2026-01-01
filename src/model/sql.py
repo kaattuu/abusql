@@ -4,11 +4,6 @@ def query1(myquery):
         "2": "SHOW VARIABLES LIKE 'char%'",
         "3": "SHOW STATUS",
         "4": "SHOW ENGINE INNODB STATUS",
-        # "5": "STATUS",
-        # "5": "SHOW STATUS WHERE Variable_name IN ('Threads_connected', 'Uptime', 'Questions', 'Slow_queries')",
-        # "5": "SHOW FULL PROCESSLIST",
-        # "5": "SELECT USER(), DATABASE(), VERSION()",
-        # "5": "SHOW STATUS LIKE 'Threads_connected'",
         "5": """
             SELECT 
                 CONNECTION_ID() as 'Connection id',
