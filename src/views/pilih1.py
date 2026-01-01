@@ -98,7 +98,7 @@ def pilih_monitoring():
             case "2"  : kendali("kendali2", "c2")
             case "3"  : kendali("kendali2", "c3")
             case "4"  : kendali("kendali2", "c4")
-            case "5"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "5"  : kendali("kendali2", "c5")
             case ""   : return menu_pilihan("monitoring")
             case "0"  : break
             case "00" : return menu_pilihan("utama")

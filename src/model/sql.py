@@ -4,7 +4,7 @@ def query1(myquery):
         "2": "SHOW VARIABLES LIKE 'char%'",
         "3": "SHOW STATUS",
         "4": "SHOW ENGINE INNODB STATUS",
-        "5": "",
+        "5": "STATUS",
         }
     return monitoring.get(myquery)
 
