@@ -2,7 +2,7 @@ def query1(myquery):
     monitoring = {
         "1": "",
         "2": "SHOW VARIABLES LIKE 'char%'",
-        "3": "",
+        "3": "SHOW STATUS",
         "4": "",
         "5": "",
         }
