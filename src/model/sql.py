@@ -25,8 +25,21 @@ def query2(myquery, data=None):
         }
     return database.get(myquery)
 
-def query3():
-    pass
+def query3(myquery):
+    user = {
+        "1" : "",
+        "2" : "",
+        "3" : "",
+        "4" : "",
+        "5" : "",
+        "6" : "",
+        "7" : "",
+        "8" : "",
+        "9" : "",
+        "10": "",
+        "11": "",
+        }
+    return user.get(myquery)
 
 def query4():
     pass
