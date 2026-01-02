@@ -42,8 +42,16 @@ def eksekusi3(query):
     except Exception as e:
         print(f"error: {e}")
 
-def eksekusi4():
-    pass
+def eksekusi4(query):
+    try: 
+        with mypool.get_connection() as conn:
+            with conn.cursor() as cursor:
+                cursor.execute(query)
+            print("success...!")
+    except Error as db_error:
+        print(f"db_error: {db_error}")
+    except Exception as e:
+        print(f"error: {e}")
 
 def eksekusi5():
     pass
@@ -58,9 +66,6 @@ daftar = {
 
 def eksekusi(pilih, query=None):
     fungsi = daftar.get(pilih)
-    if pilih == "eksekusi1":
+    if query == None:
         return fungsi()
-    if pilih == "eksekusi2":
-        return fungsi(query)
-    if pilih == "eksekusi3":
-        return fungsi(query)
+    return fungsi(query)

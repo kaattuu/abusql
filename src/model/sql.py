@@ -16,10 +16,10 @@ def query1(myquery):
         }
     return monitoring.get(myquery)
 
-def query2(myquery):
+def query2(myquery, data=None):
     database = {
         "1": "SHOW DATABASES",
-        "2": "",
+        "2": f"CREATE DATABASE IF NOT EXISTS {data}",
         "3": "",
         "4": "",
         }
@@ -42,6 +42,8 @@ daftar = {
     "query5": query5,
     }
 
-def query(pilih, myquery):
+def query(pilih, myquery, data=None):
     fungsi = daftar.get(pilih)
-    return fungsi(myquery)
+    if data == None:
+        return fungsi(myquery)
+    return fungsi(myquery, data)

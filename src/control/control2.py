@@ -1,6 +1,7 @@
 from src.model.sql import query
 from src.model.executor import eksekusi
 from src.views.table import tabel
+from src.views.inputan import inputs
 
 def kendali1(myeks, mytab):
     data = eksekusi(myeks)
@@ -11,8 +12,10 @@ def kendali2(myque, mynum, myeks, mytab):
     data2 = eksekusi(myeks, data1)
     return tabel(mytab, data2)
 
-def kendali3():
-    pass
+def kendali3(myinp, myque, mynum, myeks):
+    data1 = inputs(myinp)
+    data2 = query(myque, mynum, data1)
+    eksekusi(myeks, data2)
 
 def kendali4():
     pass
@@ -39,7 +42,8 @@ config1 = {
 
 config2 = {
     # database
-    "c1": {"myinp": "", "myque": "query2", "mynum": "1", "myeks": "eksekusi2", "mytab": "tabel7"},
+    "c1": {"myinp": "",  "myque": "query2", "mynum": "1", "myeks": "eksekusi2", "mytab": "tabel7"},
+    "c2": {"myinp": "1", "myque": "query2", "mynum": "2", "myeks": "eksekusi4", "mytab": ""},
     }
 
 config = {
@@ -62,3 +66,5 @@ def kendali(myken, myconf, mycon):
         return fungsi(myeks, mytab)
     if myken == "kendali2":
         return fungsi(myque, mynum, myeks, mytab)
+    if myken == "kendali3":
+        return fungsi(myinp, myque, mynum, myeks)
