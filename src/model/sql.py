@@ -21,7 +21,7 @@ def query2(myquery, data=None):
         "1": "SHOW DATABASES",
         "2": f"CREATE DATABASE IF NOT EXISTS {data}",
         "3": f"USE {data}",
-        "4": "",
+        "4": f"DROP DATABASE {data}",
         }
     return database.get(myquery)
 

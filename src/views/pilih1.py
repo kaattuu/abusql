@@ -45,7 +45,7 @@ def pilih_database():
             case "1"  : kendali("kendali2", "config2", "c1")
             case "2"  : kendali("kendali3", "config2", "c2")
             case "3"  : kendali("kendali3", "config2", "c3")
-            case "4"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "4"  : kendali("kendali3", "config2", "c4")
             case ""   : return menu_pilihan("database")
             case "0"  : break
             case "00" : return menu_pilihan("utama")
