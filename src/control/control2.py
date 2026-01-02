@@ -28,7 +28,7 @@ daftar = {
     "kendali5": kendali5,
     }
 
-config = {
+config1 = {
     # monitoring
     "c1": {"myinp": "", "myque": "",       "mynum": "",  "myeks": "eksekusi1", "mytab": "tabel6"},
     "c2": {"myinp": "", "myque": "query1", "mynum": "2", "myeks": "eksekusi2", "mytab": "tabel7"},
@@ -37,9 +37,20 @@ config = {
     "c5": {"myinp": "", "myque": "query1", "mynum": "5", "myeks": "eksekusi3", "mytab": "tabel7"},
     }
 
-def kendali(myken, mycon):
+config2 = {
+    # database
+    "c1": {"myinp": "", "myque": "query2", "mynum": "1", "myeks": "eksekusi2", "mytab": "tabel7"},
+    }
+
+config = {
+    "config1": config1,
+    "config2": config2,
+    }
+
+def kendali(myken, myconf, mycon):
     fungsi = daftar.get(myken)
-    konfig = config.get(mycon)
+    sett   = config.get(myconf)
+    konfig = sett.get(mycon)
 
     myinp = konfig.get("myinp")
     myque = konfig.get("myque")

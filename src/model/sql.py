@@ -16,8 +16,14 @@ def query1(myquery):
         }
     return monitoring.get(myquery)
 
-def query2():
-    pass
+def query2(myquery):
+    database = {
+        "1": "SHOW DATABASES",
+        "2": "",
+        "3": "",
+        "4": "",
+        }
+    return database.get(myquery)
 
 def query3():
     pass
