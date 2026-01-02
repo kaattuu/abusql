@@ -94,11 +94,11 @@ def pilih_monitoring():
     while True:
         pilihan = input("")
         match pilihan:
-            case "1"  : kendali("kendali1", "c1")
-            case "2"  : kendali("kendali2", "c2")
-            case "3"  : kendali("kendali2", "c3")
-            case "4"  : kendali("kendali2", "c4")
-            case "5"  : kendali("kendali2", "c5")
+            case "1"  : kendali("kendali1", "config1", "c1")
+            case "2"  : kendali("kendali2", "config1", "c2")
+            case "3"  : kendali("kendali2", "config1", "c3")
+            case "4"  : kendali("kendali2", "config1", "c4")
+            case "5"  : kendali("kendali2", "config1", "c5")
             case ""   : return menu_pilihan("monitoring")
             case "0"  : break
             case "00" : return menu_pilihan("utama")
