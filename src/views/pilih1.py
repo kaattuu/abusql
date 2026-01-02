@@ -44,7 +44,7 @@ def pilih_database():
         match pilihan:
             case "1"  : kendali("kendali2", "config2", "c1")
             case "2"  : kendali("kendali3", "config2", "c2")
-            case "3"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "3"  : kendali("kendali3", "config2", "c3")
             case "4"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case ""   : return menu_pilihan("database")
             case "0"  : break

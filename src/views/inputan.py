@@ -1,6 +1,9 @@
+from src.config.my_config import ubah_db
+
 def input1():
     print("silahkan masukan nama database:")
     nm_dbase = input("").strip()
+    ubah_db(nm_dbase)
     return nm_dbase
 
 def input2():
