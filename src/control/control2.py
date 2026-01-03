@@ -17,8 +17,11 @@ def kendali3(myinp, myque, mynum, myeks):
     data2 = query(myque, mynum, data1)
     eksekusi(myeks, data2)
 
-def kendali4():
-    pass
+def kendali4(myinp, myque, mynum, myeks, mytab):
+    data1 = inputs(myinp)
+    data2 = query(myque, mynum, data1)
+    data3 = eksekusi(myeks, data2)
+    return tabel(mytab, data3)
 
 def kendali5():
     pass
@@ -53,6 +56,7 @@ config3 = {
     "c2": {"myinp": "2", "myque": "query3", "mynum": "2", "myeks": "eksekusi4", "mytab": ""},
     "c3": {"myinp": "3", "myque": "query3", "mynum": "3", "myeks": "eksekusi4", "mytab": ""},
     "c4": {"myinp": "4", "myque": "query3", "mynum": "4", "myeks": "eksekusi4", "mytab": ""},
+    "c5": {"myinp": "5", "myque": "query3", "mynum": "5", "myeks": "eksekusi2", "mytab": "tabel7"},
     }
 
 config = {
@@ -78,3 +82,5 @@ def kendali(myken, myconf, mycon):
         return fungsi(myque, mynum, myeks, mytab)
     if myken == "kendali3":
         return fungsi(myinp, myque, mynum, myeks)
+    if myken == "kendali4":
+        return fungsi(myinp, myque, mynum, myeks, mytab)

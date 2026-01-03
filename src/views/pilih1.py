@@ -25,7 +25,7 @@ def pilih_user():
             case "2"  : kendali("kendali3", "config3", "c2")
             case "3"  : kendali("kendali3", "config3", "c3")
             case "4"  : kendali("kendali3", "config3", "c4")
-            case "5"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "5"  : kendali("kendali4", "config3", "c5")
             case "6"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "7"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "8"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")

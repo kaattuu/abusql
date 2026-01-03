@@ -31,7 +31,10 @@ def input4():
     return nama_user, host_user, password
 
 def input5():
-    pass
+    print("masukkan data user.")
+    nama_user = input("nama user : ").strip()
+    host_user = input("host user : ").strip()
+    return nama_user, host_user
 
 daftar = {
     "1": input1,

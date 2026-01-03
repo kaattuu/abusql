@@ -34,7 +34,7 @@ def query3(myquery, data=None):
         "2" : f"CREATE USER '{p1}'@'{p2}' IDENTIFIED BY '{p3}'",
         "3" : f"RENAME USER '{p1}'@'{p2}' TO '{p3}'@'{p4}'",
         "4" : f"ALTER USER '{p1}'@'{p2}' IDENTIFIED BY '{p3}'",
-        "5" : "",
+        "5" : f"SHOW GRANTS FOR '{p1}'@'{p2}'",
         "6" : "",
         "7" : "",
         "8" : "",
