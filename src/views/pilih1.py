@@ -30,7 +30,7 @@ def pilih_user():
             case "7"  : kendali("kendali3", "config3", "c7")
             case "8"  : kendali("kendali5", "config3", "c8")
             case "9"  : kendali("kendali2", "config3", "c9")
-            case "10" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "10" : kendali("kendali3", "config3", "c10")
             case "11" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case ""   : return menu_pilihan("user")
             case "0"  : break

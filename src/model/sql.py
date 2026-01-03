@@ -39,7 +39,7 @@ def query3(myquery, data=None):
         "7" : f"REVOKE ALL PRIVILEGES ON {p1}.* FROM '{p2}'@'{p3}'",
         "8" : "FLUSH PRIVILEGES",
         "9" : "SHOW PROCESSLIST",
-        "10": "",
+        "10": f"KILL {p1}",
         "11": "",
         }
     return user.get(myquery)

@@ -53,15 +53,16 @@ config2 = {
     }
 
 config3 = {
-    "c1": {"myinp": "",  "myque": "query3", "mynum": "1", "myeks": "eksekusi2", "mytab": "tabel7"},
-    "c2": {"myinp": "2", "myque": "query3", "mynum": "2", "myeks": "eksekusi4", "mytab": ""},
-    "c3": {"myinp": "3", "myque": "query3", "mynum": "3", "myeks": "eksekusi4", "mytab": ""},
-    "c4": {"myinp": "4", "myque": "query3", "mynum": "4", "myeks": "eksekusi4", "mytab": ""},
-    "c5": {"myinp": "5", "myque": "query3", "mynum": "5", "myeks": "eksekusi2", "mytab": "tabel7"},
-    "c6": {"myinp": "6", "myque": "query3", "mynum": "6", "myeks": "eksekusi4", "mytab": ""},
-    "c7": {"myinp": "6", "myque": "query3", "mynum": "7", "myeks": "eksekusi4", "mytab": ""},
-    "c8": {"myinp": "",  "myque": "query3", "mynum": "8", "myeks": "eksekusi4", "mytab": ""},
-    "c9": {"myinp": "",  "myque": "query3", "mynum": "9", "myeks": "eksekusi2", "mytab": "tabel7"},
+    "c1" : {"myinp": "",  "myque": "query3", "mynum": "1",  "myeks": "eksekusi2", "mytab": "tabel7"},
+    "c2" : {"myinp": "2", "myque": "query3", "mynum": "2",  "myeks": "eksekusi4", "mytab": ""},
+    "c3" : {"myinp": "3", "myque": "query3", "mynum": "3",  "myeks": "eksekusi4", "mytab": ""},
+    "c4" : {"myinp": "4", "myque": "query3", "mynum": "4",  "myeks": "eksekusi4", "mytab": ""},
+    "c5" : {"myinp": "5", "myque": "query3", "mynum": "5",  "myeks": "eksekusi2", "mytab": "tabel7"},
+    "c6" : {"myinp": "6", "myque": "query3", "mynum": "6",  "myeks": "eksekusi4", "mytab": ""},
+    "c7" : {"myinp": "6", "myque": "query3", "mynum": "7",  "myeks": "eksekusi4", "mytab": ""},
+    "c8" : {"myinp": "",  "myque": "query3", "mynum": "8",  "myeks": "eksekusi4", "mytab": ""},
+    "c9" : {"myinp": "",  "myque": "query3", "mynum": "9",  "myeks": "eksekusi2", "mytab": "tabel7"},
+    "c10": {"myinp": "7", "myque": "query3", "mynum": "10", "myeks": "eksekusi4", "mytab": ""},
     }
 
 config = {

@@ -45,7 +45,9 @@ def input6():
     return nama_db, nama_user, host_user
 
 def input7():
-    pass
+    print("masukan id user")
+    id_user = input("id user : ").strip()
+    return id_user,
 
 def input8():
     pass
