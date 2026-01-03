@@ -35,7 +35,7 @@ def query3(myquery, data=None):
         "3" : f"RENAME USER '{p1}'@'{p2}' TO '{p3}'@'{p4}'",
         "4" : f"ALTER USER '{p1}'@'{p2}' IDENTIFIED BY '{p3}'",
         "5" : f"SHOW GRANTS FOR '{p1}'@'{p2}'",
-        "6" : "",
+        "6" : f"GRANT ALL PRIVILEGES ON {p1}.* TO '{p2}'@'{p3}'",
         "7" : "",
         "8" : "",
         "9" : "",

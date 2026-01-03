@@ -36,12 +36,31 @@ def input5():
     host_user = input("host user : ").strip()
     return nama_user, host_user
 
+def input6():
+    nama_db   = input("nama database : ").strip()
+    nama_user = input("nama user     : ").strip()
+    host_user = input("host user     : ").strip()
+    return nama_db, nama_user, host_user
+
+def input7():
+    pass
+
+def input8():
+    pass
+
+def input9():
+    pass
+
 daftar = {
     "1": input1,
     "2": input2,
     "3": input3,
     "4": input4,
     "5": input5,
+    "6": input6,
+    "7": input7,
+    "8": input8,
+    "9": input9,
     }
 
 def inputs(pilih):
