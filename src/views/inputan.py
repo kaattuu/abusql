@@ -37,7 +37,9 @@ def input5():
     return nama_user, host_user
 
 def input6():
+    print("silahkan pilih database.")
     nama_db   = input("nama database : ").strip()
+    print("silahkan pilih user")
     nama_user = input("nama user     : ").strip()
     host_user = input("host user     : ").strip()
     return nama_db, nama_user, host_user
