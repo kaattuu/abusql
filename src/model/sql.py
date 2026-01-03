@@ -33,7 +33,7 @@ def query3(myquery, data=None):
         "1" : "SELECT user, host, password FROM mysql.user",
         "2" : f"CREATE USER '{p1}'@'{p2}' IDENTIFIED BY '{p3}'",
         "3" : f"RENAME USER '{p1}'@'{p2}' TO '{p3}'@'{p4}'",
-        "4" : "",
+        "4" : f"ALTER USER '{p1}'@'{p2}' IDENTIFIED BY '{p3}'",
         "5" : "",
         "6" : "",
         "7" : "",
