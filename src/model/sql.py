@@ -27,7 +27,7 @@ def query2(myquery, data=None):
 
 def query3(myquery):
     user = {
-        "1" : "",
+        "1" : "SELECT user, host, password FROM mysql.user",
         "2" : "",
         "3" : "",
         "4" : "",
