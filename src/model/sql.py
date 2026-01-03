@@ -37,7 +37,7 @@ def query3(myquery, data=None):
         "5" : f"SHOW GRANTS FOR '{p1}'@'{p2}'",
         "6" : f"GRANT ALL PRIVILEGES ON {p1}.* TO '{p2}'@'{p3}'",
         "7" : f"REVOKE ALL PRIVILEGES ON {p1}.* FROM '{p2}'@'{p3}'",
-        "8" : "",
+        "8" : "FLUSH PRIVILEGES",
         "9" : "",
         "10": "",
         "11": "",
