@@ -14,7 +14,13 @@ def input2():
     return nama_user, host_user, password
 
 def input3():
-    pass
+    print("masukkan data user lama.")
+    nama_userr = input("nama user : ").strip()
+    host_userr = input("host user : ").strip()
+    print("masukkan data user baru.")
+    nama_user  = input("nama user : ").strip()
+    host_user  = input("host user : ").strip()
+    return nama_userr, host_userr, nama_user, host_user
 
 def input4():
     pass
