@@ -25,10 +25,13 @@ def query2(myquery, data=None):
         }
     return database.get(myquery)
 
-def query3(myquery):
+def query3(myquery, data=None):
+    data = data if data is not None else ()
+    padd = (data + (None,) * 4)[:4]
+    p1, p2, p3, p4 = padd
     user = {
         "1" : "SELECT user, host, password FROM mysql.user",
-        "2" : "",
+        "2" : f"CREATE USER '{p1}'@'{p2}' IDENTIFIED BY '{p3}'",
         "3" : "",
         "4" : "",
         "5" : "",
