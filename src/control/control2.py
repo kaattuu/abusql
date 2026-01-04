@@ -27,12 +27,29 @@ def kendali5(myque, mynum, myeks):
     data1 = query(myque, mynum)
     data2 = eksekusi(myeks, data1)
 
+def kendali6(myinp):
+    inputs(myinp)
+    print("success...!")
+
+def kendali7():
+    pass
+
+def kendali8():
+    pass
+
+def kendali9():
+    pass
+
 daftar = {
     "kendali1": kendali1,
     "kendali2": kendali2,
     "kendali3": kendali3,
     "kendali4": kendali4,
     "kendali5": kendali5,
+    "kendali6": kendali6,
+    "kendali7": kendali7,
+    "kendali8": kendali8,
+    "kendali9": kendali9,
     }
 
 config1 = {
@@ -67,8 +84,9 @@ config3 = {
     }
 
 config4 = {
-    "c1": {"myinp": "", "myque": "",       "mynum": "",   "myeks": "",         "mytab": ""},
-    "c2": {"myinp": "", "myque": "query4", "mynum": "2", "myeks": "eksekusi2", "mytab": "tabel7"},
+    "c1": {"myinp": "",  "myque": "",       "mynum": "",  "myeks": "",          "mytab": ""},
+    "c2": {"myinp": "",  "myque": "query4", "mynum": "2", "myeks": "eksekusi2", "mytab": "tabel7"},
+    "c3": {"myinp": "8", "myque": "",       "mynum": "",  "myeks": "",          "mytab": ""},
     }
 
 config = {
@@ -99,3 +117,5 @@ def kendali(myken, myconf, mycon):
         return fungsi(myinp, myque, mynum, myeks, mytab)
     if myken == "kendali5":
         return fungsi(myque, mynum, myeks)
+    if myken == "kendali6":
+        return fungsi(myinp)

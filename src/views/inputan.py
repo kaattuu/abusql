@@ -1,10 +1,9 @@
-from src.config.my_config import ubah_db
+from src.config.my_config import my_global
 
 def input1():
     print("silahkan masukan nama database:")
     nm_dbase = input("nama database: ").strip()
-    ubah_db(nm_dbase)
-    return nm_dbase
+    return my_global("ubah_db", nm_dbase)
 
 def input2():
     print("masukkan data user baru.")
@@ -50,7 +49,9 @@ def input7():
     return id_user,
 
 def input8():
-    pass
+    print("silahkan pilih nama tabel")
+    nm_tabel = input("nama tabel : ").strip()
+    return my_global("ubah_tb", nm_tabel)
 
 def input9():
     pass
