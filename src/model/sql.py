@@ -58,7 +58,7 @@ def query4(myquery, data=None):
         "5": f"SHOW COLUMNS FROM {my_global("mydb")}.{p1}",
         "6": f"SHOW CREATE TABLE {my_global("mydb")}.{p1}",
         "7": f"",
-        "8": f"",
+        "8": f"RENAME TABLE {my_global("mydb")}.{p1} TO {my_global("mydb")}.{p2}",
         "9": f"",
         }
     return tabel.get(myquery)

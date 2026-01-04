@@ -61,16 +61,48 @@ def input9():
     struktur = input("struktur   : ").strip()
     return my_global("ubah_tb", nm_tabel), struktur
 
+def input10():
+    print("silahkan pilih tabel yang mau diubah")
+    nama_tabel = input("nama tabel : ").strip()
+    if nama_tabel == "":
+        nama_tabel = my_global("mytb")
+    print("silahkan masukkan nama baru")
+    tabel_baru = input("nama tabel : ").strip()
+    if tabel_baru == "":
+        tabel_baru = my_global("mytb")
+    return nama_tabel, my_global("ubah_tb", tabel_baru)
+
+def input11():
+    pass
+
+def input12():
+    pass
+
+def input13():
+    pass
+
+def input14():
+    pass
+
+def input15():
+    pass
+
 daftar = {
-    "1": input1,
-    "2": input2,
-    "3": input3,
-    "4": input4,
-    "5": input5,
-    "6": input6,
-    "7": input7,
-    "8": input8,
-    "9": input9,
+    "1" : input1,
+    "2" : input2,
+    "3" : input3,
+    "4" : input4,
+    "5" : input5,
+    "6" : input6,
+    "7" : input7,
+    "8" : input8,
+    "9" : input9,
+    "10": input10,
+    "11": input11,
+    "12": input12,
+    "13": input13,
+    "14": input14,
+    "15": input15,
     }
 
 def inputs(pilih):
