@@ -41,6 +41,7 @@ menu_tabel = (
 
 menu_data = (
     "pilih database",
+    "lihat tabel",
     "pilih tabel",
     "input data",
     "input data banyak",
