@@ -56,7 +56,7 @@ def query4(myquery, data=None):
         "3": f"",
         "4": f"CREATE TABLE IF NOT EXISTS {my_global("mydb")}.{p1} ({p2})",
         "5": f"SHOW COLUMNS FROM {my_global("mydb")}.{p1}",
-        "6": f"",
+        "6": f"SHOW CREATE TABLE {my_global("mydb")}.{p1}",
         "7": f"",
         "8": f"",
         "9": f"",
