@@ -54,7 +54,10 @@ def input8():
     return my_global("ubah_tb", nm_tabel)
 
 def input9():
-    pass
+    print("silahkan masukkan nama tabel")
+    nm_tabel = input("nama tabel : ").strip()
+    struktur = input("struktur   : ").strip()
+    return my_global("ubah_tb", nm_tabel), struktur
 
 daftar = {
     "1": input1,
