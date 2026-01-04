@@ -66,10 +66,15 @@ config3 = {
     "c11": {"myinp": "5", "myque": "query3", "mynum": "11", "myeks": "eksekusi4", "mytab": ""},
     }
 
+config4 = {
+    "c1": {"myinp": "", "myque": "", "mynum": "", "myeks": "", "mytab": ""},
+    }
+
 config = {
     "config1": config1,
     "config2": config2,
     "config3": config3,
+    "config4": config4,
     }
 
 def kendali(myken, myconf, mycon):

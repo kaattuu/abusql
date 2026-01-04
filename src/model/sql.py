@@ -44,8 +44,22 @@ def query3(myquery, data=None):
         }
     return user.get(myquery)
 
-def query4():
-    pass
+def query4(myquery, data=None):
+    data = data if data is not None else ()
+    padd = (data + (None,) * 4)[:4]
+    p1, p2, p3, p4 = padd
+    tabel = {
+        "1": f"",
+        "2": f"",
+        "3": f"",
+        "4": f"",
+        "5": f"",
+        "6": f"",
+        "7": f"",
+        "8": f"",
+        "9": f"",
+        }
+    return tabel.get(myquery)
 
 def query5():
     pass
