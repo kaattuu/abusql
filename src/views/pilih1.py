@@ -56,7 +56,7 @@ def pilih_tabel():
     while True:
         pilihan = input("")
         match pilihan:
-            case "1"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "1"  : kendali("kendali3", "config2", "c3")
             case "2"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "3"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "4"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
