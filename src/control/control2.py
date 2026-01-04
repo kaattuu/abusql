@@ -88,6 +88,7 @@ config4 = {
     "c2": {"myinp": "",  "myque": "query4", "mynum": "2", "myeks": "eksekusi2", "mytab": "tabel7"},
     "c3": {"myinp": "8", "myque": "",       "mynum": "",  "myeks": "",          "mytab": ""},
     "c4": {"myinp": "9", "myque": "query4", "mynum": "4", "myeks": "eksekusi4", "mytab": ""},
+    "c5": {"myinp": "8", "myque": "query4", "mynum": "5", "myeks": "eksekusi2", "mytab": "tabel7"},
     }
 
 config = {

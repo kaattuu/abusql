@@ -60,7 +60,7 @@ def pilih_tabel():
             case "2"  : kendali("kendali2", "config4", "c2")
             case "3"  : kendali("kendali6", "config4", "c3")
             case "4"  : kendali("kendali3", "config4", "c4")
-            case "5"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "5"  : kendali("kendali4", "config4", "c5")
             case "6"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "7"  : return menu_pilihan("struktur")
             case "8"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")

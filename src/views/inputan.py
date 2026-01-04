@@ -51,7 +51,9 @@ def input7():
 def input8():
     print("silahkan pilih nama tabel")
     nm_tabel = input("nama tabel : ").strip()
-    return my_global("ubah_tb", nm_tabel)
+    if nm_tabel == "":
+        return my_global("mytb"),
+    return my_global("ubah_tb", nm_tabel),
 
 def input9():
     print("silahkan masukkan nama tabel")
