@@ -29,9 +29,9 @@ menu_database = (
 
 menu_tabel = (
     "pilih database",
+    "lihat tabel",
     "pilih tabel",
     "buat tabel baru",
-    "lihat tabel",
     "lihat struktur tabel",
     "lihat kode pembuatan tabel",
     "ubah struktur tabel...",

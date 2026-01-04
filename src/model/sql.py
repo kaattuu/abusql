@@ -1,3 +1,5 @@
+from src.config.my_config import my_global
+
 def query1(myquery):
     monitoring = {
         "1": "",
@@ -50,7 +52,7 @@ def query4(myquery, data=None):
     p1, p2, p3, p4 = padd
     tabel = {
         "1": f"",
-        "2": f"",
+        "2": f"SHOW TABLES FROM {my_global("mydb")}",
         "3": f"",
         "4": f"",
         "5": f"",
