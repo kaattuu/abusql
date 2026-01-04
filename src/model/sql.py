@@ -59,7 +59,7 @@ def query4(myquery, data=None):
         "6": f"SHOW CREATE TABLE {my_global("mydb")}.{p1}",
         "7": f"",
         "8": f"RENAME TABLE {my_global("mydb")}.{p1} TO {my_global("mydb")}.{p2}",
-        "9": f"",
+        "9": f"DROP TABLE {my_global("mydb")}.{p1}",
         }
     return tabel.get(myquery)
 
