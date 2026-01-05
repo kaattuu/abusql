@@ -75,13 +75,14 @@ def input10():
 
 def input11():
     nm_tabel = input("nama tabel: ").strip()
-    my_tabel = nm_tabel,
     if nm_tabel == "":
-        nm_tabel == my_global("mytb")
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
     kolom, place = logika("1", my_tabel)
     print("silahkan masukkan data, pakai koma pemisah antar kolom.")
     valuee = input("").strip()
     values = logika("2", valuee)
+    my_global("ubah_tb", nm_tabel)
     return nm_tabel, kolom, place, values
 
 def input12():
