@@ -78,8 +78,17 @@ def eksekusi6(query, value):
     except Exception as e:
         print(f"error: {e}")
 
-def eksekusi7():
-    pass
+def eksekusi7(query, value):
+    try: 
+        with mypool.get_connection() as conn:
+            with conn.cursor() as cursor:
+                cursor.executemany(query, value)
+            conn.commit()
+            print("success...!")
+    except Error as db_error:
+        print(f"db_error: {db_error}")
+    except Exception as e:
+        print(f"error: {e}")
 
 def eksekusi8():
     pass

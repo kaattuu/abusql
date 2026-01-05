@@ -79,7 +79,7 @@ def pilih_data():
             case "2"  : kendali("kendali2", "config4", "c2")
             case "3"  : kendali("kendali6", "config4", "c3")
             case "4"  : kendali("kendali7", "config5", "c4")
-            case "5"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "5"  : kendali("kendali7", "config5", "c5")
             case "6"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "7"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "8"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
