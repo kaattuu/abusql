@@ -1,4 +1,5 @@
 from src.config.my_config import my_global
+from src.service.inplogic import logika
 
 def input1():
     print("silahkan masukan nama database:")
@@ -73,7 +74,15 @@ def input10():
     return nama_tabel, my_global("ubah_tb", tabel_baru)
 
 def input11():
-    pass
+    nm_tabel = input("nama tabel: ").strip()
+    my_tabel = nm_tabel,
+    if nm_tabel == "":
+        nm_tabel == my_global("mytb")
+    kolom, place = logika("1", my_tabel)
+    print("silahkan masukkan data, pakai koma pemisah antar kolom.")
+    valuee = input("").strip()
+    values = logika("2", valuee)
+    return nm_tabel, kolom, place, values
 
 def input12():
     pass

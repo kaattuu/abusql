@@ -53,7 +53,38 @@ def eksekusi4(query):
     except Exception as e:
         print(f"error: {e}")
 
-def eksekusi5():
+def eksekusi5(query):
+    try: 
+        with mypool.get_connection() as conn:
+            with conn.cursor() as cursor:
+                cursor.execute(query)
+                kolom = cursor.column_names
+                baris = cursor.fetchall()
+                return kolom
+    except Error as db_error:
+        print(f"db_error: {db_error}")
+    except Exception as e:
+        print(f"error: {e}")
+
+def eksekusi6(query, value):
+    try: 
+        with mypool.get_connection() as conn:
+            with conn.cursor() as cursor:
+                cursor.execute(query, value)
+            conn.commit()
+            print("success...!")
+    except Error as db_error:
+        print(f"db_error: {db_error}")
+    except Exception as e:
+        print(f"error: {e}")
+
+def eksekusi7():
+    pass
+
+def eksekusi8():
+    pass
+
+def eksekusi9():
     pass
 
 daftar = {
@@ -62,10 +93,16 @@ daftar = {
     "eksekusi3": eksekusi3,
     "eksekusi4": eksekusi4,
     "eksekusi5": eksekusi5,
+    "eksekusi6": eksekusi6,
+    "eksekusi7": eksekusi7,
+    "eksekusi8": eksekusi8,
+    "eksekusi9": eksekusi9,
     }
 
-def eksekusi(pilih, query=None):
+def eksekusi(pilih, query=None, value=None):
     fungsi = daftar.get(pilih)
-    if query == None:
+    if query is None and value is None:
         return fungsi()
-    return fungsi(query)
+    if value is None:
+        return fungsi(query)
+    return fungsi(query, value)

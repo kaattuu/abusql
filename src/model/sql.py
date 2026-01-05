@@ -71,9 +71,9 @@ def query5(myquery, data=None):
         "1": f"",
         "2": f"",
         "3": f"",
-        "4": f"",
+        "4": f"INSERT INTO {my_global("mydb")}.{p1} ({p2}) VALUES ({p3})",  # `INSERT INTO users VALUES (1, 'Katu');`
         "5": f"",
-        "6": f"",
+        "6": f"SELECT * FROM {my_global("mydb")}.{p1}",
         "7": f"",
         "8": f"",
         "9": f"",

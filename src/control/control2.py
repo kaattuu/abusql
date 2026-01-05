@@ -31,8 +31,11 @@ def kendali6(myinp):
     inputs(myinp)
     print("success...!")
 
-def kendali7():
-    pass
+def kendali7(myinp, myque, mynum, myeks):
+    nm_tabel, kolom, place, values = inputs(myinp)
+    data1 = nm_tabel, kolom, place
+    data2 = query(myque, mynum, data1)
+    eksekusi(myeks, data2, values)
 
 def kendali8():
     pass
@@ -96,7 +99,10 @@ config4 = {
     }
 
 config5 = {
-    "c1": {"myinp": "", "myque": "", "mynum": "", "myeks": "", "mytab": ""},
+    "c1": {"myinp": "",   "myque": "",       "mynum": "",  "myeks": "",          "mytab": ""},
+    "c2": {"myinp": "",   "myque": "",       "mynum": "",  "myeks": "",          "mytab": ""},
+    "c3": {"myinp": "",   "myque": "",       "mynum": "",  "myeks": "",          "mytab": ""},
+    "c4": {"myinp": "11", "myque": "query5", "mynum": "4", "myeks": "eksekusi6", "mytab": ""},
     }
 
 config = {
@@ -130,3 +136,5 @@ def kendali(myken, myconf, mycon):
         return fungsi(myque, mynum, myeks)
     if myken == "kendali6":
         return fungsi(myinp)
+    if myken == "kendali7":
+        return fungsi(myinp, myque, mynum, myeks)
