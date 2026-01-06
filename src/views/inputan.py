@@ -107,10 +107,19 @@ def input13():
     print("silahkan masukan id data yang mau di hapus.")
     no_id = input("nomor_id: ").strip()
     no_id = no_id,
+    my_global("ubah_tb", nm_tabel)
     return nm_tabel, wheree, no_id
 
 def input14():
-    pass
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("masukkan struktur kolom tambahan")
+    struktur = input("").strip()
+    my_global("ubah_tb", nm_tabel)
+    return nm_tabel, struktur
 
 def input15():
     pass

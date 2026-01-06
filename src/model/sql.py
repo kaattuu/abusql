@@ -86,7 +86,7 @@ def query6(myquery, data=None):
     padd = (data + (None,) * 4)[:4]
     p1, p2, p3, p4 = padd
     operasi_kolom = {
-        "1" : f"",
+        "1" : f"ALTER TABLE {my_global("mydb")}.{p1} ADD COLUMN {p2}",
         "2" : f"",
         "3" : f"",
         "4" : f"",

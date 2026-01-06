@@ -37,8 +37,13 @@ def logika5(data):
     tabel("tabel7", kolom2)
     return wheree
 
-def logika6():
-    pass
+def logika6(data):
+    data1    = query("query5", "6", data)
+    data2    = query("query4", "5", data)
+    kolom    = eksekusi("eksekusi5", data1)
+    struktur = eksekusi("eksekusi2", data2)
+    tabel("tabel7", struktur)
+    tabel("tabel3", kolom)
 
 def logika7():
     pass
