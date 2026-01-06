@@ -81,6 +81,22 @@ def query5(myquery, data=None):
         }
     return menu_data.get(myquery)
 
+def query6(myquery, data=None):
+    data = data if data is not None else ()
+    padd = (data + (None,) * 4)[:4]
+    p1, p2, p3, p4 = padd
+    operasi_kolom = {
+        "1" : f"",
+        "2" : f"",
+        "3" : f"",
+        "4" : f"",
+        "5" : f"",
+        "6" : f"",
+        "7" : f"",
+        "8" : f"",
+        "9" : f"",
+        }
+    return operasi_kolom.get(myquery)
 
 daftar = {
     "query1": query1,
@@ -88,6 +104,7 @@ daftar = {
     "query3": query3,
     "query4": query4,
     "query5": query5,
+    "query6": query6,
     }
 
 def query(pilih, myquery, data=None):
