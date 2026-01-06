@@ -16,11 +16,18 @@ def logika2(data):
     value = ast.literal_eval(data)      # konversi string ke tuple menggunakan modul ast - abstrak syntax tree
     return value
 
-def logika3():
-    pass
+def logika3(data):
+    data1  = query("query5", "6", data)
+    kolom1 = eksekusi("eksekusi5", data1)
+    kolom2 = eksekusi("eksekusi2", data1)
+    seeet  = [f"{i} = %s" for i in kolom1 if i != "id"]
+    where  = [f"{i} = %s" for i in kolom1 if i == "id"]
+    tabel("tabel7", kolom2)
+    return ", ".join(seeet), "".join(where)
 
-def logika4():
-    pass
+def logika4(data):
+    value = data[1:] + data[0:1]
+    return value
 
 def logika5():
     pass

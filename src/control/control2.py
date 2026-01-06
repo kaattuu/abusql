@@ -105,6 +105,7 @@ config5 = {
     "c4": {"myinp": "11", "myque": "query5", "mynum": "4", "myeks": "eksekusi6", "mytab": ""},
     "c5": {"myinp": "11", "myque": "query5", "mynum": "4", "myeks": "eksekusi7", "mytab": ""},
     "c6": {"myinp": "8",  "myque": "query5", "mynum": "6", "myeks": "eksekusi2", "mytab": "tabel7"},
+    "c7": {"myinp": "12", "myque": "query5", "mynum": "7", "myeks": "eksekusi6", "mytab": ""},
     }
 
 config = {

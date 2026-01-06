@@ -86,7 +86,17 @@ def input11():
     return nm_tabel, kolom, place, values
 
 def input12():
-    pass
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    seeet, where = logika("3", my_tabel)
+    print("silahkan masukkan data, pakai koma pemisah antar kolom.")
+    valuee = input("").strip()
+    values = logika("2", valuee)
+    value  = logika("4", values)
+    my_global("ubah_tb", nm_tabel)
+    return nm_tabel, seeet, where, value
 
 def input13():
     pass
