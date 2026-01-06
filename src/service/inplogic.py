@@ -29,8 +29,13 @@ def logika4(data):
     value = data[1:] + data[0:1]
     return value
 
-def logika5():
-    pass
+def logika5(data):
+    data1  = query("query5", "6", data)
+    kolom1 = eksekusi("eksekusi5", data1)
+    kolom2 = eksekusi("eksekusi2", data1)
+    wheree = kolom1[0] + "= %s"
+    tabel("tabel7", kolom2)
+    return wheree
 
 def logika6():
     pass

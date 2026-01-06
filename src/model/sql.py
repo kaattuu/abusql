@@ -75,7 +75,7 @@ def query5(myquery, data=None):
         "5": f"",
         "6": f"SELECT * FROM {my_global("mydb")}.{p1}",
         "7": f"UPDATE {my_global("mydb")}.{p1} SET {p2} WHERE {p3}",
-        "8": f"",
+        "8": f"DELETE FROM {my_global("mydb")}.{p1} WHERE {p2}",
         "9": f"",
         }
     return menu_data.get(myquery)

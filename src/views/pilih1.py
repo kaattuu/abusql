@@ -82,8 +82,9 @@ def pilih_data():
             case "5"  : kendali("kendali7", "config5", "c5")
             case "6"  : kendali("kendali4", "config5", "c6")
             case "7"  : kendali("kendali7", "config5", "c7")
-            case "8"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "8"  : kendali("kendali8", "config5", "c8")
             case "9"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "10" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case ""   : return menu_pilihan("data")
             case "0"  : break
             case "00" : return menu_pilihan("utama")

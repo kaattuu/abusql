@@ -99,7 +99,15 @@ def input12():
     return nm_tabel, seeet, where, value
 
 def input13():
-    pass
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    wheree = logika("5", my_tabel)
+    print("silahkan masukan id data yang mau di hapus.")
+    no_id = input("nomor_id: ").strip()
+    no_id = no_id,
+    return nm_tabel, wheree, no_id
 
 def input14():
     pass
