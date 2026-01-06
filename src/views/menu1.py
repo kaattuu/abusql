@@ -68,6 +68,7 @@ menu_struktur = (
     )
 
 menu_kolom = (
+    "lihat struktur dan kolom tabel",
     "menambah kolom biasa",
     "menambah beberapa kolom sekaligus",
     "menambah kolom di posisi awal",

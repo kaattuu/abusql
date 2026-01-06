@@ -43,8 +43,8 @@ def kendali8(myinp, myque, mynum, myeks):
     data2 = query(myque, mynum, data1)
     eksekusi(myeks, data2, no_id)
 
-def kendali9():
-    pass
+def kendali9(myinp):
+    inputs(myinp)
 
 daftar = {
     "kendali1": kendali1,
@@ -115,7 +115,8 @@ config5 = {
     }
 
 config6 = {
-    "c1" : {"myinp": "14", "myque": "query6", "mynum": "1", "myeks": "eksekusi4", "mytab": ""},
+    "c1" : {"myinp": "15", "myque": "",       "mynum": "",  "myeks": "",          "mytab": ""},
+    "c2" : {"myinp": "14", "myque": "query6", "mynum": "2", "myeks": "eksekusi4", "mytab": ""},
     }
 
 config = {
@@ -154,3 +155,5 @@ def kendali(myken, myconf, mycon):
         return fungsi(myinp, myque, mynum, myeks)
     if myken == "kendali8":
         return fungsi(myinp, myque, mynum, myeks)
+    if myken == "kendali9":
+        return fungsi(myinp)

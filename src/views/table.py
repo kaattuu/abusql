@@ -2,23 +2,23 @@ def tabel0(data):
     print(data)
     print(type(data))
 
-# satu kolom satu baris
+# satu kolom, satu baris
 def tabel1(data): 
     jumlah_elemen = len(data)
     jumlah_huruf  = [len(i) for i in data]
     padding       = 2
     garis_atas    = f"┌{"─" * (max(jumlah_huruf) + padding)}┐"
     garis_bawah   = f"└{"─" * (max(jumlah_huruf) + padding)}┘"
-    print()
+    # print()
     print(garis_atas)
     hasil = ""
     for i in data:
         hasil += f"│ {i} │"
     print(hasil)
     print(garis_bawah)
-    print()
+    # print()
 
-# dua kolom satu baris
+# dua kolom, satu baris
 def tabel2(data): 
     # data diharapkan berupa tuple/list dengan 2 elemen, misal: ("Nama", "Hobi")
     padding = 2
@@ -32,13 +32,13 @@ def tabel2(data):
     garis_tengah = f"│ {data[0]} │ {data[1]} │"
     garis_bawah  = f"└{'─' * lebar_kolom1}┴{'─' * lebar_kolom2}┘"
     
-    print()
+    # print()
     print(garis_atas)
     print(garis_tengah)
     print(garis_bawah)
-    print()
+    # print()
 
-# satu sampai n kolom satu baris
+# satu sampai n kolom, satu baris
 def tabel3(data):
     # Mengonversi semua elemen ke string dan menghitung lebar tiap kolom
     padding = 2
@@ -59,13 +59,13 @@ def tabel3(data):
     isi_bawah = "┴".join(["─" * lebar for lebar in lebar_kolom])
     garis_bawah = f"└{isi_bawah}┘"
     
-    print()
+    # print()
     print(garis_atas)
     print(garis_tengah)
     print(garis_bawah)
-    print()
+    # print()
 
-# satu kolom dua baris
+# satu kolom, dua baris
 def tabel4(data):
     # Data diharapkan berupa tuple dengan 2 elemen, misal: ("Baris 1", "Baris 2")
     padding = 2
@@ -81,15 +81,15 @@ def tabel4(data):
     baris_2       = f"│ {str(data[1]).ljust(lebar_maks - 1)}│"
     garis_bawah   = f"└{garis_horizontal}┘"
     
-    print()
+    # print()
     print(garis_atas)
     print(baris_1)
     print(garis_tengah)
     print(baris_2)
     print(garis_bawah)
-    print()
+    # print()
 
-# dua kolom dua baris
+# dua kolom, dua baris
 def tabel5(data):
     # Data diharapkan berupa tuple of tuples atau list of lists
     # Contoh: (("A1", "B1"), ("A2", "B2"))
@@ -112,15 +112,15 @@ def tabel5(data):
     baris1 = f"│ {str(r1c1).ljust(lebar_k1-1)}│ {str(r1c2).ljust(lebar_k2-1)}│"
     baris2 = f"│ {str(r2c1).ljust(lebar_k1-1)}│ {str(r2c2).ljust(lebar_k2-1)}│"
     
-    print()
+    # print()
     print(garis_atas)
     print(baris1)
     print(garis_tengah)
     print(baris2)
     print(garis_bawah)
-    print()
+    # print()
 
-# satu sampai n kolom dan satu sampai n baris
+# satu sampai n kolom, satu sampai n baris
 def tabel6(data):
     if not data:
         return
@@ -158,7 +158,7 @@ def tabel6(data):
         return f"{kiri}{tengah.join(bagian)}{kanan}"
 
     # 3. Cetak tabel
-    print()
+    # print()
     print(buat_garis("┌", "┬", "┐"))
     
     for i, baris in enumerate(data):
@@ -179,7 +179,7 @@ def tabel6(data):
             print(buat_garis("├", "┼", "┤"))
             
     print(buat_garis("└", "┴", "┘"))
-    print()
+    # print()
 
 def tabel7(data):
     if data is None:
@@ -193,7 +193,7 @@ def tabel7(data):
     jml_kolom = len(tabel[0])
     jml_baris = len(tabel) - 1
     tot_baris = len(tabel)
-    print("")
+    # print("")
     for index, kolom in enumerate(tabel):
         # garis atas
         if index == 0 and index != 1:
@@ -234,7 +234,7 @@ def tabel7(data):
                 else:
                     garis_bawah += f"─{"─" * maks}─┴"
             print(f"└{garis_bawah}┘")
-    print("")
+    # print("")
 
 daftar = {
     "tabel0": tabel0,

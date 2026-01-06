@@ -124,8 +124,8 @@ def pilih_kolom():
     while True:
         pilihan = input("")
         match pilihan:
-            case "1"  : kendali("kendali3", "config6", "c1")
-            case "2"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "1"  : kendali("kendali9", "config6", "c1")
+            case "2"  : kendali("kendali3", "config6", "c2")
             case "3"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "4"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "5"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
@@ -133,6 +133,7 @@ def pilih_kolom():
             case "7"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "8"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "9"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "10" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case ""   : return menu_pilihan("kolom")
             case "0"  : break
             case "00" : return menu_pilihan("struktur")
