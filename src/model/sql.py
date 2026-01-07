@@ -96,7 +96,7 @@ def query6(myquery, data=None):
         "8"  : f"ALTER TABLE {my_global("mydb")}.{p1} MODIFY COLUMN {p2} AFTER {p3}",
         "9"  : f"ALTER TABLE {my_global("mydb")}.{p1} MODIFY {p2} NOT NULL",
         "10" : f"ALTER TABLE {my_global("mydb")}.{p1} MODIFY {p2} NULL",
-        "11" : f"",
+        "11" : f"ALTER TABLE {my_global("mydb")}.{p1} DROP COLUMN {p2}",
         }
     return operasi_kolom.get(myquery)
 
