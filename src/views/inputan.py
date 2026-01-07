@@ -194,6 +194,44 @@ def input20():
     my_global("ubah_tb", nm_tabel)
     return nm_tabel, struktur, setelah
 
+def input21():
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("silahkan pilih kolom lengkapi dengan type datanya : ")
+    struktur = input("").strip()
+    my_global("ubah_tb", nm_tabel)
+    return nm_tabel, struktur
+
+def input22():
+    pass
+
+def input23():
+    pass
+
+def input24():
+    pass
+
+def input25():
+    pass
+
+def input26():
+    pass
+
+def input27():
+    pass
+
+def input28():
+    pass
+
+def input29():
+    pass
+
+def input30():
+    pass
+
 daftar = {
     "1" : input1,
     "2" : input2,
@@ -215,6 +253,16 @@ daftar = {
     "18": input18,
     "19": input19,
     "20": input20,
+    "21": input21,
+    "22": input22,
+    "23": input23,
+    "24": input24,
+    "25": input25,
+    "26": input26,
+    "27": input27,
+    "28": input28,
+    "29": input29,
+    "30": input30,
     }
 
 def inputs(pilih):

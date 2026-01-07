@@ -94,7 +94,7 @@ def query6(myquery, data=None):
         "6"  : f"ALTER TABLE {my_global("mydb")}.{p1} CHANGE COLUMN {p2} {p3}",
         "7"  : f"ALTER TABLE {my_global("mydb")}.{p1} MODIFY COLUMN {p2}",
         "8"  : f"ALTER TABLE {my_global("mydb")}.{p1} MODIFY COLUMN {p2} AFTER {p3}",
-        "9"  : f"",
+        "9"  : f"ALTER TABLE {my_global("mydb")}.{p1} MODIFY {p2} NOT NULL",
         "10" : f"",
         "11" : f"",
         }

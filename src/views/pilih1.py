@@ -132,7 +132,7 @@ def pilih_kolom():
             case "6"  : kendali("kendali3", "config6", "c6")
             case "7"  : kendali("kendali3", "config6", "c7")
             case "8"  : kendali("kendali3", "config6", "c8")
-            case "9"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "9"  : kendali("kendali3", "config6", "c9")
             case "10" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "11" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case ""   : return menu_pilihan("kolom")
