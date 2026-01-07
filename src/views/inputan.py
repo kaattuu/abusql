@@ -165,13 +165,21 @@ def input18():
     logika("6", my_tabel)
     print("silahkan pilih kolom yang akan diubah :")
     nm_lama  = input("").strip()
-    print("masukkan struktur dan tipe kolom baru :")
+    print("masukkan struktur dan type kolom baru :")
     struktur = input("").strip()
     my_global("ubah_tb", nm_tabel)
     return nm_tabel, nm_lama, struktur
 
 def input19():
-    pass
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("silahkan pilih kolom lengkapi dengan type data yang baru : ")
+    struktur = input("").strip()
+    my_global("ubah_tb", nm_tabel)
+    return nm_tabel, struktur
 
 def input20():
     pass

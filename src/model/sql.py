@@ -92,7 +92,7 @@ def query6(myquery, data=None):
         "4"  : f"ALTER TABLE {my_global("mydb")}.{p1} ADD COLUMN {p2} FIRST;",
         "5"  : f"ALTER TABLE {my_global("mydb")}.{p1} ADD COLUMN {p2} AFTER {p3}",
         "6"  : f"ALTER TABLE {my_global("mydb")}.{p1} CHANGE COLUMN {p2} {p3}",
-        "7"  : f"",
+        "7"  : f"ALTER TABLE {my_global("mydb")}.{p1} MODIFY COLUMN {p2}",
         "8"  : f"",
         "9"  : f"",
         "10" : f"",
