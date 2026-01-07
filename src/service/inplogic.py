@@ -45,8 +45,10 @@ def logika6(data):
     tabel("tabel7", struktur)
     tabel("tabel3", kolom)
 
-def logika7():
-    pass
+def logika7(data):
+    data1 = [f"ADD COLUMN {i}" for i in data]
+    data2 = ", ".join(data1)
+    return data2
 
 def logika8():
     pass

@@ -128,6 +128,33 @@ def input15():
         nm_tabel = my_global("mytb")
     my_tabel = nm_tabel,
     logika("6", my_tabel)
+    my_global("ubah_tb", nm_tabel)
+
+def input16():
+    print("silahkan pilih nama tabel")
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("masukkan struktur kolom tambahan")
+    struktur1 = input("").strip()
+    struktur2 = logika("2", struktur1)
+    struktur  = logika("7", struktur2)
+    my_global("ubah_tb", nm_tabel)
+    return nm_tabel, struktur
+
+def input17():
+    pass
+
+def input18():
+    pass
+
+def input19():
+    pass
+
+def input20():
+    pass
 
 daftar = {
     "1" : input1,
@@ -145,6 +172,11 @@ daftar = {
     "13": input13,
     "14": input14,
     "15": input15,
+    "16": input16,
+    "17": input17,
+    "18": input18,
+    "19": input19,
+    "20": input20,
     }
 
 def inputs(pilih):
