@@ -145,7 +145,17 @@ def input16():
     return nm_tabel, struktur
 
 def input17():
-    pass
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("masukkan struktur kolom tambahan   :")
+    struktur = input("").strip()
+    print("silahkan pilih kolom after/setelah :")
+    setelah  = input("").strip()
+    my_global("ubah_tb", nm_tabel)
+    return nm_tabel, struktur, setelah
 
 def input18():
     pass
