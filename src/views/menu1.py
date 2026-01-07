@@ -75,6 +75,7 @@ menu_kolom = (
     "menambah kolom di posisi tertentu",
     "mengubah nama kolom",
     "mengubah tipe data kolom",
+    "mengubah kolom ke posisi tertentu",
     "mengubah kolom menjadi NOT NULL",
     "mengubah kolom menjadi NULL",
     "menghapus kolom"

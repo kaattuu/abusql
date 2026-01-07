@@ -131,9 +131,10 @@ def pilih_kolom():
             case "5"  : kendali("kendali3", "config6", "c5")
             case "6"  : kendali("kendali3", "config6", "c6")
             case "7"  : kendali("kendali3", "config6", "c7")
-            case "8"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "8"  : kendali("kendali3", "config6", "c8")
             case "9"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "10" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "11" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case ""   : return menu_pilihan("kolom")
             case "0"  : break
             case "00" : return menu_pilihan("struktur")
