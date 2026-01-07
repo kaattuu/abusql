@@ -100,6 +100,27 @@ def query6(myquery, data=None):
         }
     return operasi_kolom.get(myquery)
 
+def query7(myquery, data=None):
+    data = data if data is not None else ()
+    padd = (data + (None,) * 4)[:4]
+    p1, p2, p3, p4 = padd
+    operasi_constraint = {
+        "1"  : f"",
+        "2"  : f"",
+        "3"  : f"",
+        "4"  : f"",
+        "5"  : f"",
+        "6"  : f"",
+        "7"  : f"",
+        "8"  : f"",
+        "9"  : f"",
+        "10" : f"",
+        "11" : f"",
+        "12" : f"",
+        "13" : f"",
+        "14" : f"",
+        }
+
 daftar = {
     "query1": query1,
     "query2": query2,
@@ -107,6 +128,7 @@ daftar = {
     "query4": query4,
     "query5": query5,
     "query6": query6,
+    "query7": query7,
     }
 
 def query(pilih, myquery, data=None):
