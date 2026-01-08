@@ -119,6 +119,7 @@ def query7(myquery, data=None):
         "12" : f"",
         "13" : f"",
         "14" : f"",
+        "15" : f"",
         }
 
 daftar = {

@@ -82,6 +82,7 @@ menu_kolom = (
     )
 
 menu_constraint = (
+    "lihat struktur dan kolom tabel",
     "menambah primary key",
     "menghapus primary key",
     "menambah unique key",

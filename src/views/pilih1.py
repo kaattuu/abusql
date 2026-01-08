@@ -145,7 +145,7 @@ def pilih_constraint():
     while True:
         pilihan = input("")
         match pilihan:
-            case "1"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "1"  : kendali("kendali9", "config6", "c1")
             case "2"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "3"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "4"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
@@ -159,6 +159,7 @@ def pilih_constraint():
             case "12" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "13" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "14" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "15" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case ""   : return menu_pilihan("constraint")
             case "0"  : break
             case "00" : return menu_pilihan("struktur")
