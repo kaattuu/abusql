@@ -56,16 +56,60 @@ def logika8():
 def logika9():
     pass
 
+def logika10():
+    pass
+
+def logika11():
+    pass
+
+def logika12():
+    pass
+
+def logika13():
+    pass
+
+def logika14():
+    pass
+
+def logika15():
+    pass
+
+def logika16():
+    pass
+
+def logika17():
+    pass
+
+def logika18():
+    pass
+
+def logika19():
+    pass
+
+def logika20():
+    pass
+
 daftar = {
-    "1": logika1,
-    "2": logika2,
-    "3": logika3,
-    "4": logika4,
-    "5": logika5,
-    "6": logika6,
-    "7": logika7,
-    "8": logika8,
-    "9": logika9,
+    "1" : logika1,
+    "2" : logika2,
+    "3" : logika3,
+    "4" : logika4,
+    "5" : logika5,
+    "6" : logika6,
+    "7" : logika7,
+    "8" : logika8,
+    "9" : logika9,
+    "10": logika10,
+    "11": logika11,
+    "12": logika12,
+    "13": logika13,
+    "14": logika14,
+    "15": logika15,
+    "16": logika16,
+    "17": logika17,
+    "18": logika18,
+    "19": logika19,
+    "20": logika20,
     }
 
 def logika(pilih, data):

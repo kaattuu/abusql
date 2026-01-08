@@ -123,6 +123,22 @@ def query7(myquery, data=None):
         }
     return operasi_constraint.get(myquery)
 
+def query8(myquery, data=None):
+    data = data if data is not None else ()
+    padd = (data + (None,) * 5)[:5]
+    p1, p2, p3, p4, p5 = padd
+    operasi_property = {
+        "1"  : f"",
+        "2"  : f"",
+        "3"  : f"",
+        "4"  : f"",
+        "5"  : f"",
+        "6"  : f"",
+        "7"  : f"",
+        "8"  : f"",
+        }
+    return operasi_property.get(myquery)
+
 daftar = {
     "query1": query1,
     "query2": query2,
@@ -131,6 +147,7 @@ daftar = {
     "query5": query5,
     "query6": query6,
     "query7": query7,
+    "query8": query8,
     }
 
 def query(pilih, myquery, data=None):

@@ -401,6 +401,36 @@ def input39():
 def input40():
     pass
 
+def input41():
+    pass
+
+def input42():
+    pass
+
+def input43():
+    pass
+
+def input44():
+    pass
+
+def input45():
+    pass
+
+def input46():
+    pass
+
+def input47():
+    pass
+
+def input48():
+    pass
+
+def input49():
+    pass
+
+def input50():
+    pass
+
 daftar = {
     "1" : input1,
     "2" : input2,
@@ -442,6 +472,16 @@ daftar = {
     "38": input38,
     "39": input39,
     "40": input40,
+    "41": input41,
+    "42": input42,
+    "43": input43,
+    "44": input44,
+    "45": input45,
+    "46": input46,
+    "47": input47,
+    "48": input48,
+    "49": input49,
+    "50": input50,
     }
 
 def inputs(pilih):
