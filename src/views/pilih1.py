@@ -157,7 +157,7 @@ def pilih_constraint():
             case "10" : kendali("kendali3", "config7", "c10")
             case "11" : kendali("kendali3", "config7", "c11")
             case "12" : kendali("kendali3", "config7", "c12")
-            case "13" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "13" : kendali("kendali3", "config7", "c13")
             case "14" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "15" : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case ""   : return menu_pilihan("constraint")
