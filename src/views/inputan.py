@@ -281,9 +281,16 @@ def input27():
     my_global("ubah_tb", nm_tabel)
     return nm_tabel, fk_nama, kolom_fk, nm_tabel1, kolom_ref
 
-
 def input28():
-    pass
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("silahkan pilih fk_nama constraint yang mau dihapus")
+    fk_nama   = input("fk_nama  : ").strip()
+    my_global("ubah_tb", nm_tabel)
+    return nm_tabel, fk_nama
 
 def input29():
     pass
