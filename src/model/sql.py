@@ -106,7 +106,7 @@ def query7(myquery, data=None):
     p1, p2, p3, p4 = padd
     operasi_constraint = {
         "1"  : f"",
-        "2"  : f"",
+        "2"  : f"ALTER TABLE {my_global("mydb")}.{p1} ADD PRIMARY KEY ({p2})",
         "3"  : f"",
         "4"  : f"",
         "5"  : f"",
@@ -121,6 +121,7 @@ def query7(myquery, data=None):
         "14" : f"",
         "15" : f"",
         }
+    return operasi_constraint.get(myquery)
 
 daftar = {
     "query1": query1,
