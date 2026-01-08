@@ -119,7 +119,7 @@ def query7(myquery, data=None):
         "12" : f"ALTER TABLE {my_global("mydb")}.{p1} ADD CONSTRAINT {p2} UNIQUE ({p3}, {p4})",
         "13" : f"ALTER TABLE {my_global("mydb")}.{p1} DROP CONSTRAINT {p2}",
         "14" : f"ALTER TABLE {my_global("mydb")}.{p1} ALTER COLUMN {p2} SET DEFAULT '{p3}'",
-        "15" : f"ALTER TABLE {my_global("mydb")}.{p1} ALTER COLUMN status DROP DEFAULT",
+        "15" : f"ALTER TABLE {my_global("mydb")}.{p1} ALTER COLUMN {p2} DROP DEFAULT",
         }
     return operasi_constraint.get(myquery)
 
