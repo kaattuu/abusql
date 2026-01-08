@@ -109,7 +109,7 @@ def query7(myquery, data=None):
         "2"  : f"ALTER TABLE {my_global("mydb")}.{p1} ADD PRIMARY KEY ({p2})",
         "3"  : f"ALTER TABLE {my_global("mydb")}.{p1} DROP PRIMARY KEY",
         "4"  : f"ALTER TABLE {my_global("mydb")}.{p1} ADD UNIQUE ({p2})",
-        "5"  : f"",
+        "5"  : f"ALTER TABLE {my_global("mydb")}.{p1} DROP INDEX {p2}",
         "6"  : f"",
         "7"  : f"",
         "8"  : f"",

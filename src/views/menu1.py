@@ -86,7 +86,7 @@ menu_constraint = (
     "menambah primary key",
     "menghapus primary key",
     "menambah unique key",
-    "menghapus uniquie key",
+    "menghapus unique key",
     "menambah foreign key",
     "menghapus foreign key",
     "menambah index",
