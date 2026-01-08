@@ -115,7 +115,7 @@ def query7(myquery, data=None):
         "8"  : f"ALTER TABLE {my_global("mydb")}.{p1} ADD INDEX {p2} ({p3})",
         "9"  : f"ALTER TABLE {my_global("mydb")}.{p1} DROP INDEX {p2}",
         "10" : f"ALTER TABLE {my_global("mydb")}.{p1} ADD CONSTRAINT {p2} CHECK ({p3})",
-        "11" : f"ALTER TABLE {my_global("mydb")}.{p1} DROP CHECK chk_harga",
+        "11" : f"ALTER TABLE {my_global("mydb")}.{p1} DROP CONSTRAINT {p2}",
         "12" : f"ALTER TABLE {my_global("mydb")}.{p1} ADD CONSTRAINT unique_kombinasi UNIQUE (kolom1, kolom2)",
         "13" : f"ALTER TABLE {my_global("mydb")}.{p1} DROP FOREIGN KEY nama_acak",
         "14" : f"ALTER TABLE {my_global("mydb")}.{p1} ALTER COLUMN status SET DEFAULT 'aktif'",

@@ -330,7 +330,15 @@ def input31():
     return nm_tabel, chk_nama, kolom_chk
 
 def input32():
-    pass
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("silahkan pilih chk_nama yang akan di hapus ")
+    chk_nama  = input("chk_nama : ").strip()
+    my_global("ubah_tb", nm_tabel)
+    return nm_tabel, chk_nama
 
 def input33():
     pass
