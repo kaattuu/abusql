@@ -316,6 +316,46 @@ def input30():
     my_global("ubah_tb", nm_tabel)
     return nm_tabel, idx_nama
 
+def input31():
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("silahkan buat dulu chk_nama")
+    chk_nama  = input("chk_nama  : ").strip()
+    print("silahkan pilih kolom dan lengkapi dengan logika chk")
+    kolom_chk = input("kolom_chk : ").strip()
+    my_global("ubah_tb", nm_tabel)
+    return nm_tabel, chk_nama, kolom_chk
+
+def input32():
+    pass
+
+def input33():
+    pass
+
+def input34():
+    pass
+
+def input35():
+    pass
+
+def input36():
+    pass
+
+def input37():
+    pass
+
+def input38():
+    pass
+
+def input39():
+    pass
+
+def input40():
+    pass
+
 daftar = {
     "1" : input1,
     "2" : input2,
@@ -347,6 +387,16 @@ daftar = {
     "28": input28,
     "29": input29,
     "30": input30,
+    "31": input31,
+    "32": input32,
+    "33": input33,
+    "34": input34,
+    "35": input35,
+    "36": input36,
+    "37": input37,
+    "38": input38,
+    "39": input39,
+    "40": input40,
     }
 
 def inputs(pilih):
