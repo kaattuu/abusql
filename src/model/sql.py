@@ -112,7 +112,7 @@ def query7(myquery, data=None):
         "5"  : f"ALTER TABLE {my_global("mydb")}.{p1} DROP INDEX {p2}",
         "6"  : f"ALTER TABLE {my_global("mydb")}.{p1} ADD CONSTRAINT {p2} FOREIGN KEY ({p3}) REFERENCES {p4}({p5})",
         "7"  : f"ALTER TABLE {my_global("mydb")}.{p1} DROP FOREIGN KEY {p2}",
-        "8"  : f"ALTER TABLE {my_global("mydb")}.{p1} ADD INDEX idx_nama (nama)",
+        "8"  : f"ALTER TABLE {my_global("mydb")}.{p1} ADD INDEX {p2} ({p3})",
         "9"  : f"ALTER TABLE {my_global("mydb")}.{p1} DROP INDEX idx_nama",
         "10" : f"ALTER TABLE {my_global("mydb")}.{p1} ADD CONSTRAINT chk_harga CHECK (harga > 0)",
         "11" : f"ALTER TABLE {my_global("mydb")}.{p1} DROP CHECK chk_harga",

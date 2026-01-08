@@ -293,7 +293,17 @@ def input28():
     return nm_tabel, fk_nama
 
 def input29():
-    pass
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("silahkan buat dulu idx_nama ")
+    idx_nama  = input("idx_nama : ").strip()
+    print("silahakn pilih kolom yang akan di beri index")
+    kolom_idx = input("nm_kolom : ").strip()
+    my_global("ubah_tb", nm_tabel)
+    return nm_tabel, idx_nama, kolom_idx
 
 def input30():
     pass
