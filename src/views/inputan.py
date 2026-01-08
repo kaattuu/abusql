@@ -241,7 +241,15 @@ def input24():
     return nm_tabel,
 
 def input25():
-    pass
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("silahkan pilih kolom sebagai unique key : ")
+    nm_kolom = input("").strip()
+    my_global("ubah_tb", nm_tabel)
+    return nm_tabel, nm_kolom
 
 def input26():
     pass
