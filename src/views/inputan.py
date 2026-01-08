@@ -228,7 +228,17 @@ def input23():
     return nm_tabel, nm_kolom
 
 def input24():
-    pass
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("silahkan masukan nama tabel ")
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_global("ubah_tb", nm_tabel)
+    return nm_tabel,
 
 def input25():
     pass
