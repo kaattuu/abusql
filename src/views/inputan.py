@@ -263,7 +263,24 @@ def input26():
     return nm_tabel, nm_kolom
 
 def input27():
-    pass
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("silahkan masukkan fk_nama constraint ")
+    fk_nama   = input("fk_nama  : ").strip()
+    print("silahkan pilih kolom sebagai foreign key")
+    kolom_fk  = input("kolom_fk : ").strip()
+    print("silahkan masukkan nama tabel tujuan")
+    nm_tabel1 = input("nm_tabel : ").strip()
+    nm_tabel2 = nm_tabel1,
+    logika("6", nm_tabel2)
+    print("silahkan pilih kolom yang menjadi referensi")
+    kolom_ref = input("nm_kolom : ").strip()
+    my_global("ubah_tb", nm_tabel)
+    return nm_tabel, fk_nama, kolom_fk, nm_tabel1, kolom_ref
+
 
 def input28():
     pass

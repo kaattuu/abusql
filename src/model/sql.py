@@ -102,24 +102,24 @@ def query6(myquery, data=None):
 
 def query7(myquery, data=None):
     data = data if data is not None else ()
-    padd = (data + (None,) * 4)[:4]
-    p1, p2, p3, p4 = padd
+    padd = (data + (None,) * 5)[:5]
+    p1, p2, p3, p4, p5 = padd
     operasi_constraint = {
         "1"  : f"",
         "2"  : f"ALTER TABLE {my_global("mydb")}.{p1} ADD PRIMARY KEY ({p2})",
         "3"  : f"ALTER TABLE {my_global("mydb")}.{p1} DROP PRIMARY KEY",
         "4"  : f"ALTER TABLE {my_global("mydb")}.{p1} ADD UNIQUE ({p2})",
         "5"  : f"ALTER TABLE {my_global("mydb")}.{p1} DROP INDEX {p2}",
-        "6"  : f"",
-        "7"  : f"",
-        "8"  : f"",
-        "9"  : f"",
-        "10" : f"",
-        "11" : f"",
-        "12" : f"",
-        "13" : f"",
-        "14" : f"",
-        "15" : f"",
+        "6"  : f"ALTER TABLE {my_global("mydb")}.{p1} ADD CONSTRAINT {p2} FOREIGN KEY ({p3}) REFERENCES {p4}({p5})",
+        "7"  : f"ALTER TABLE {my_global("mydb")}.{p1} DROP FOREIGN KEY fk_nama",
+        "8"  : f"ALTER TABLE {my_global("mydb")}.{p1} ADD INDEX idx_nama (nama)",
+        "9"  : f"ALTER TABLE {my_global("mydb")}.{p1} DROP INDEX idx_nama",
+        "10" : f"ALTER TABLE {my_global("mydb")}.{p1} ADD CONSTRAINT chk_harga CHECK (harga > 0)",
+        "11" : f"ALTER TABLE {my_global("mydb")}.{p1} DROP CHECK chk_harga",
+        "12" : f"ALTER TABLE {my_global("mydb")}.{p1} ADD CONSTRAINT unique_kombinasi UNIQUE (kolom1, kolom2)",
+        "13" : f"ALTER TABLE {my_global("mydb")}.{p1} DROP FOREIGN KEY nama_acak",
+        "14" : f"ALTER TABLE {my_global("mydb")}.{p1} ALTER COLUMN status SET DEFAULT 'aktif'",
+        "15" : f"ALTER TABLE {my_global("mydb")}.{p1} ALTER COLUMN status DROP DEFAULT",
         }
     return operasi_constraint.get(myquery)
 
