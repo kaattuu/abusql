@@ -502,7 +502,22 @@ def input46():
     return nm_tabel, nm_laci
 
 def input47():
-    pass
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("silahkan pilih nama_laci utama sebagai induk")
+    nm_laci  = input("nm_laci :").strip()
+    print("silahkan buat nama_laci pertama dan niliainya")
+    nm_laci1 = input("nm_laci :").strip()
+    nilai1   = input("nilai   :").strip()
+    print("silahkan buat nama_laci kedua dan niliainya")
+    nm_laci2 = input("nm_laci :").strip()
+    nilai2   = input("nilai   :").strip()
+    my_global("ubah_tb", nm_tabel)
+    return nm_tabel, nm_laci, nm_laci1, nilai1, nm_laci2, nilai2
+
 
 def input48():
     pass

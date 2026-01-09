@@ -141,13 +141,13 @@ def query8(myquery, data=None):
 
 def query9(myquery, data=None):
     data = data if data is not None else ()
-    padd = (data + (None,) * 5)[:5]
-    p1, p2, p3, p4, p5 = padd
+    padd = (data + (None,) * 6)[:6]
+    p1, p2, p3, p4, p5, p6 = padd
     operasi_partisi = {
         "1" : f"ALTER TABLE {my_global("mydb")}.{p1} PARTITION BY RANGE ({p2}) (PARTITION {p3} VALUES LESS THAN ({p4}))",
         "2" : f"ALTER TABLE {my_global("mydb")}.{p1} REMOVE PARTITIONING",
         "3" : f"ALTER TABLE {my_global("mydb")}.{p1} TRUNCATE PARTITION {p2}",
-        "4" : f"ALTER TABLE nama_tabel REORGANIZE PARTITION nama_partisi_lama INTO (PARTITION nama_partisi_baru1 VALUES LESS THAN (nilai), PARTITION nama_partisi_baru2 VALUES LESS THAN (nilai_lain));",
+        "4" : f"ALTER TABLE {my_global("mydb")}.{p1} REORGANIZE PARTITION {p2} INTO (PARTITION {p3} VALUES LESS THAN ({p4}), PARTITION {p5} VALUES LESS THAN ({p6}));",
         "5" : f"SELECT PARTITION_NAME, TABLE_ROWS, PARTITION_EXPRESSION, PARTITION_DESCRIPTION FROM information_schema.PARTITIONS WHERE TABLE_NAME = 'nama_tabel' AND TABLE_SCHEMA = 'nama_database_anda';",
         }
     return operasi_partisi.get(myquery)
