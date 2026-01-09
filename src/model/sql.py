@@ -130,7 +130,7 @@ def query8(myquery, data=None):
     operasi_property = {
         "1"  : f"ALTER TABLE {my_global("mydb")}.{p1} RENAME TO {my_global("mydb")}.{p2}",
         "2"  : f"ALTER TABLE {my_global("mydb")}.{p1} ENGINE = {p2}",
-        "3"  : f"",
+        "3"  : f"ALTER TABLE {my_global("mydb")}.{p1} CONVERT TO CHARACTER SET {p2} COLLATE {p3}",
         "4"  : f"",
         "5"  : f"",
         "6"  : f"",

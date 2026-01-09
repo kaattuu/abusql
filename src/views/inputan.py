@@ -412,8 +412,18 @@ def input38():
     return nm_tabel, nm_engine
 
 def input39():
-    pass
-
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("silahkan masukkan nama charset")
+    nm_charset = input("nm_charset: ").strip()
+    print("silahkan masukkan nama collate")
+    nm_collate = input("nm_collate: ").strip()
+    my_global("ubah_tb", nm_tabel)
+    return nm_tabel, nm_charset, nm_collate
+    
 def input40():
     pass
 
