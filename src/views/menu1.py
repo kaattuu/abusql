@@ -113,6 +113,9 @@ menu_properti = (
 menu_partisi = (
     "menambah partition",
     "menghapus partition"
+    "mengosongkan data partisi (truncate)",
+    "menata ulang partisi (reorganize)",
+    "mengecek status partisi"
     )
 
 data_dict = {

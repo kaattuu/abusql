@@ -188,8 +188,11 @@ def pilih_partisi():
     while True:
         pilihan = input("")
         match pilihan:
-            case "1"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "1"  : kendali("kendali3", "config9", "c1")
             case "2"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "3"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "4"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "5"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case ""   : return menu_pilihan("partisi")
             case "0"  : break
             case "00" : return menu_pilihan("struktur")

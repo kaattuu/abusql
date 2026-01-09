@@ -144,8 +144,8 @@ def query9(myquery, data=None):
     padd = (data + (None,) * 5)[:5]
     p1, p2, p3, p4, p5 = padd
     operasi_partisi = {
-        "1" : f""
-        "2" : f""
+        "1" : f"ALTER TABLE {my_global("mydb")}.{p1} PARTITION BY RANGE ({p2}) (PARTITION {p3} VALUES LESS THAN ({p4}))",
+        "2" : f"",
         }
     return operasi_partisi.get(myquery)
 
