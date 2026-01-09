@@ -135,7 +135,7 @@ def query8(myquery, data=None):
         "5"  : f"ALTER TABLE {my_global("mydb")}.{p1} COMMENT = '{p2}'",
         "6"  : f"ALTER TABLE {my_global("mydb")}.{p1} ROW_FORMAT = {p2}",
         "7"  : f"ALTER TABLE {my_global("mydb")}.{p1} DISABLE KEYS",
-        "8"  : f"",
+        "8"  : f"ALTER TABLE {my_global("mydb")}.{p1} ENABLE KEYS",
         }
     return operasi_property.get(myquery)
 
