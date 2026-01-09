@@ -139,6 +139,16 @@ def query8(myquery, data=None):
         }
     return operasi_property.get(myquery)
 
+def query9(myquery, data=None):
+    data = data if data is not None else ()
+    padd = (data + (None,) * 5)[:5]
+    p1, p2, p3, p4, p5 = padd
+    operasi_partisi = {
+        "1" : f""
+        "2" : f""
+        }
+    return operasi_partisi.get(myquery)
+
 daftar = {
     "query1": query1,
     "query2": query2,
@@ -148,6 +158,7 @@ daftar = {
     "query6": query6,
     "query7": query7,
     "query8": query8,
+    "query9": query9,
     }
 
 def query(pilih, myquery, data=None):
