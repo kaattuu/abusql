@@ -436,7 +436,15 @@ def input40():
     return nm_tabel, nilai
 
 def input41():
-    pass
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("silahkan masukkan comment atau catatan tabel")
+    comment = input("comment: ").strip()
+    my_global("ubah_tb", nm_tabel)
+    return nm_tabel, comment
 
 def input42():
     pass
