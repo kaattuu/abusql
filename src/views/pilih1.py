@@ -176,7 +176,7 @@ def pilih_properti():
             case "4"  : kendali("kendali3", "config8", "c4")
             case "5"  : kendali("kendali3", "config8", "c5")
             case "6"  : kendali("kendali3", "config8", "c6")
-            case "7"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "7"  : kendali("kendali3", "config8", "c7")
             case "8"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case ""   : return menu_pilihan("properti")
             case "0"  : break
