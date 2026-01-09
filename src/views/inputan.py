@@ -518,9 +518,19 @@ def input47():
     my_global("ubah_tb", nm_tabel)
     return nm_tabel, nm_laci, nm_laci1, nilai1, nm_laci2, nilai2
 
-
 def input48():
-    pass
+    nm_tabel = input("nama tabel : ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("silahkan pilih nama database")
+    nm_dbase = input("nama dbase : ").strip()
+    if nm_dbase == "":
+        nm_dbase = my_global("mydb")
+    my_global("ubah_tb", nm_tabel)
+    my_global("ubah_db", nm_dbase)
+    return nm_tabel, nm_dbase
 
 def input49():
     pass

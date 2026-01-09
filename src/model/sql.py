@@ -148,7 +148,7 @@ def query9(myquery, data=None):
         "2" : f"ALTER TABLE {my_global("mydb")}.{p1} REMOVE PARTITIONING",
         "3" : f"ALTER TABLE {my_global("mydb")}.{p1} TRUNCATE PARTITION {p2}",
         "4" : f"ALTER TABLE {my_global("mydb")}.{p1} REORGANIZE PARTITION {p2} INTO (PARTITION {p3} VALUES LESS THAN ({p4}), PARTITION {p5} VALUES LESS THAN ({p6}));",
-        "5" : f"SELECT PARTITION_NAME, TABLE_ROWS, PARTITION_EXPRESSION, PARTITION_DESCRIPTION FROM information_schema.PARTITIONS WHERE TABLE_NAME = 'nama_tabel' AND TABLE_SCHEMA = 'nama_database_anda';",
+        "5" : f"SELECT PARTITION_NAME, TABLE_ROWS, PARTITION_EXPRESSION, PARTITION_DESCRIPTION FROM information_schema.PARTITIONS WHERE TABLE_NAME = '{p1}' AND TABLE_SCHEMA = '{p2}';",
         }
     return operasi_partisi.get(myquery)
 
