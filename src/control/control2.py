@@ -147,7 +147,7 @@ config7 = {
     }
 
 config8 = {
-    "c1"  : {"myinp": "", "myque": "", "mynum": "", "myeks": "", "mytab": ""},
+    "c1"  : {"myinp": "37", "myque": "query8", "mynum": "1", "myeks": "eksekusi8", "mytab": ""},
     }
 
 config = {

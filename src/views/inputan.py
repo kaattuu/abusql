@@ -390,7 +390,15 @@ def input36():
     return nm_tabel, nm_kolom
 
 def input37():
-    pass
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("silahkan masukkan nama tabel baru")
+    nm_tabel2 = input("nm_tabel: ").strip()
+    my_global("ubah_tb", nm_tabel2)
+    return nm_tabel, nm_tabel2
 
 def input38():
     pass

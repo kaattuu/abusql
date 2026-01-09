@@ -128,7 +128,7 @@ def query8(myquery, data=None):
     padd = (data + (None,) * 5)[:5]
     p1, p2, p3, p4, p5 = padd
     operasi_property = {
-        "1"  : f"",
+        "1"  : f"ALTER TABLE {my_global("mydb")}.{p1} RENAME TO {my_global("mydb")}.{p2}",
         "2"  : f"",
         "3"  : f"",
         "4"  : f"",
