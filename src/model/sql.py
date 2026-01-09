@@ -146,9 +146,9 @@ def query9(myquery, data=None):
     operasi_partisi = {
         "1" : f"ALTER TABLE {my_global("mydb")}.{p1} PARTITION BY RANGE ({p2}) (PARTITION {p3} VALUES LESS THAN ({p4}))",
         "2" : f"ALTER TABLE {my_global("mydb")}.{p1} REMOVE PARTITIONING",
-        "3" : f"",
-        "4" : f"",
-        "5" : f"",
+        "3" : f"ALTER TABLE {my_global("mydb")}.{p1} TRUNCATE PARTITION {p2}",
+        "4" : f"ALTER TABLE nama_tabel REORGANIZE PARTITION nama_partisi_lama INTO (PARTITION nama_partisi_baru1 VALUES LESS THAN (nilai), PARTITION nama_partisi_baru2 VALUES LESS THAN (nilai_lain));",
+        "5" : f"SELECT PARTITION_NAME, TABLE_ROWS, PARTITION_EXPRESSION, PARTITION_DESCRIPTION FROM information_schema.PARTITIONS WHERE TABLE_NAME = 'nama_tabel' AND TABLE_SCHEMA = 'nama_database_anda';",
         }
     return operasi_partisi.get(myquery)
 

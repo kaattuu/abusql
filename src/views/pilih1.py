@@ -190,7 +190,7 @@ def pilih_partisi():
         match pilihan:
             case "1"  : kendali("kendali3", "config9", "c1")
             case "2"  : kendali("kendali3", "config9", "c2")
-            case "3"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "3"  : kendali("kendali3", "config9", "c3")
             case "4"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "5"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case ""   : return menu_pilihan("partisi")

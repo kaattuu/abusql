@@ -491,7 +491,15 @@ def input45():
     return nm_tabel,
 
 def input46():
-    pass
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("silahkan pilih nama laci")
+    nm_laci  = input("nm_laci  : ").strip()
+    my_global("ubah_tb", nm_tabel)
+    return nm_tabel, nm_laci
 
 def input47():
     pass
