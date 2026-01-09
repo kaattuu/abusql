@@ -129,7 +129,7 @@ def query8(myquery, data=None):
     p1, p2, p3, p4, p5 = padd
     operasi_property = {
         "1"  : f"ALTER TABLE {my_global("mydb")}.{p1} RENAME TO {my_global("mydb")}.{p2}",
-        "2"  : f"",
+        "2"  : f"ALTER TABLE {my_global("mydb")}.{p1} ENGINE = {p2}",
         "3"  : f"",
         "4"  : f"",
         "5"  : f"",

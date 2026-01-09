@@ -401,7 +401,15 @@ def input37():
     return nm_tabel, nm_tabel2
 
 def input38():
-    pass
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("silahkan masukkan nama engine tabel")
+    nm_engine = input("nm_engine: ").strip()
+    my_global("ubah_tb", nm_tabel)
+    return nm_tabel, nm_engine
 
 def input39():
     pass

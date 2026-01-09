@@ -171,7 +171,7 @@ def pilih_properti():
         pilihan = input("")
         match pilihan:
             case "1"  : kendali("kendali3", "config8", "c1")
-            case "2"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
+            case "2"  : kendali("kendali3", "config8", "c2")
             case "3"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "4"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
             case "5"  : print(f"kamu memilih nomor '{pilihan}'. terimakasih!")
