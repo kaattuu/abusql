@@ -133,7 +133,7 @@ def query8(myquery, data=None):
         "3"  : f"ALTER TABLE {my_global("mydb")}.{p1} CONVERT TO CHARACTER SET {p2} COLLATE {p3}",
         "4"  : f"ALTER TABLE {my_global("mydb")}.{p1} AUTO_INCREMENT = {p2}",
         "5"  : f"ALTER TABLE {my_global("mydb")}.{p1} COMMENT = '{p2}'",
-        "6"  : f"",
+        "6"  : f"ALTER TABLE {my_global("mydb")}.{p1} ROW_FORMAT = {p2}",
         "7"  : f"",
         "8"  : f"",
         }

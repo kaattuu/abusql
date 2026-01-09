@@ -447,7 +447,15 @@ def input41():
     return nm_tabel, comment
 
 def input42():
-    pass
+    nm_tabel = input("nama tabel: ").strip()
+    if nm_tabel == "":
+        nm_tabel = my_global("mytb")
+    my_tabel = nm_tabel,
+    logika("6", my_tabel)
+    print("silahkan pilih jensi row_format : DYNAMIC - FIXED/REDUNDANT - COMPACT - COMPRESSED")
+    row_format = input("row_format: ").strip()
+    my_global("ubah_tb", nm_tabel)
+    return nm_tabel, row_format
 
 def input43():
     pass
